@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestaurantDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Name="CNP" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="true" />
+    <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="true" />
+    <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Angajati_Roluri" FromRole="Employees" ToRole="Roles" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Facturi_Angajati" FromRole="Employees" ToRole="Invoices" />
+    <NavigationProperty Name="TransferNotes" Relationship="Self.FK_NoteDeTransfer_Angajati" FromRole="Employees" ToRole="TransferNote" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Facturi_Angajati" FromRole="Invoices" ToRole="Employees" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Facturi_Furnizori" FromRole="Invoices" ToRole="Suppliers" />
+    <NavigationProperty Name="InvoiceUnits" Relationship="Self.FK_UnitateFactura_Facturi" FromRole="Invoices" ToRole="InvoiceUnit" />
+  </EntityType>
+  <EntityType Name="Kitchen">
+    <Key>
+      <PropertyRef Name="KitchenID" />
+    </Key>
+    <Property Name="KitchenID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Bucatarie_Produse" FromRole="Kitchen" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CookingTime" Type="Time" Precision="7" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Weight" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ingredients" Relationship="Self.FK_Ingrediente_Meniu" FromRole="Menu" ToRole="Ingredients" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TVA" Type="Double" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="UnitID" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="Kitchens" Relationship="Self.FK_Bucatarie_Produse" FromRole="Products" ToRole="Kitchen" />
+    <NavigationProperty Name="Stores" Relationship="Self.FK_Depozit_Produse" FromRole="Products" ToRole="Store" />
+    <NavigationProperty Name="Ingredients" Relationship="Self.FK_Ingrediente_Produse" FromRole="Products" ToRole="Ingredients" />
+    <NavigationProperty Name="Unit" Relationship="Self.FK_Products_Units" FromRole="Products" ToRole="Units" />
+    <NavigationProperty Name="InvoiceUnits" Relationship="Self.FK_UnitateFactura_Produse" FromRole="Products" ToRole="InvoiceUnit" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Angajati_Roluri" FromRole="Roles" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ManufacturingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Depozit_Produse" FromRole="Store" ToRole="Products" />
+    <NavigationProperty Name="TransferNotes" Relationship="Self.FK_NoteDeTransfer_Depozit" FromRole="Store" ToRole="TransferNote" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CIF" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Facturi_Furnizori" FromRole="Suppliers" ToRole="Invoices" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Units" FromRole="Units" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="Quantity" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="Self.FK_Ingrediente_Meniu" FromRole="Ingredients" ToRole="Menu" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Ingrediente_Produse" FromRole="Ingredients" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="InvoiceUnit">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="Quantity" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Invoice" Relationship="Self.FK_UnitateFactura_Facturi" FromRole="InvoiceUnit" ToRole="Invoices" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_UnitateFactura_Produse" FromRole="InvoiceUnit" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="TransferNote">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_NoteDeTransfer_Angajati" FromRole="TransferNote" ToRole="Employees" />
+    <NavigationProperty Name="Store" Relationship="Self.FK_NoteDeTransfer_Depozit" FromRole="TransferNote" ToRole="Store" />
+  </EntityType>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Angajati_Roluri">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturi_Angajati">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoteDeTransfer_Angajati">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="TransferNote" Type="Self.TransferNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="TransferNote">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturi_Furnizori">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnitateFactura_Facturi">
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="InvoiceUnit" Type="Self.InvoiceUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceUnit">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bucatarie_Produse">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="Kitchen" Type="Self.Kitchen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Kitchen">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ingrediente_Meniu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="Ingredients" Type="Self.Ingredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="Ingredients">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Depozit_Produse">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="Store" Type="Self.Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ingrediente_Produse">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="Ingredients" Type="Self.Ingredient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Ingredients">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Units">
+    <End Role="Units" Type="Self.Unit" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Units">
+        <PropertyRef Name="UnitID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnitateFactura_Produse">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="InvoiceUnit" Type="Self.InvoiceUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="InvoiceUnit">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoteDeTransfer_Depozit">
+    <End Role="Store" Type="Self.Store" Multiplicity="1" />
+    <End Role="TransferNote" Type="Self.TransferNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="TransferNote">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RestaurantDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="Kitchens" EntityType="Self.Kitchen" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Stores" EntityType="Self.Store" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Units" EntityType="Self.Unit" />
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredient" />
+    <EntitySet Name="InvoiceUnits" EntityType="Self.InvoiceUnit" />
+    <EntitySet Name="TransferNotes" EntityType="Self.TransferNote" />
+    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Angajati_Roluri" Association="Self.FK_Angajati_Roluri">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturi_Angajati" Association="Self.FK_Facturi_Angajati">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoteDeTransfer_Angajati" Association="Self.FK_NoteDeTransfer_Angajati">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="TransferNote" EntitySet="TransferNotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturi_Furnizori" Association="Self.FK_Facturi_Furnizori">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnitateFactura_Facturi" Association="Self.FK_UnitateFactura_Facturi">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceUnit" EntitySet="InvoiceUnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bucatarie_Produse" Association="Self.FK_Bucatarie_Produse">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Kitchen" EntitySet="Kitchens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ingrediente_Meniu" Association="Self.FK_Ingrediente_Meniu">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="Ingredients" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Depozit_Produse" Association="Self.FK_Depozit_Produse">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Store" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ingrediente_Produse" Association="Self.FK_Ingrediente_Produse">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Ingredients" EntitySet="Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Units" Association="Self.FK_Products_Units">
+      <End Role="Units" EntitySet="Units" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnitateFactura_Produse" Association="Self.FK_UnitateFactura_Produse">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="InvoiceUnit" EntitySet="InvoiceUnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoteDeTransfer_Depozit" Association="Self.FK_NoteDeTransfer_Depozit">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="TransferNote" EntitySet="TransferNotes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
