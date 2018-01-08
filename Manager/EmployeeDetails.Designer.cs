@@ -37,13 +37,13 @@
             this.metroTextBoxPhone = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBoxCNP = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBoxLastName = new MetroFramework.Controls.MetroTextBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTextBoxFirstName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabelAdress = new MetroFramework.Controls.MetroLabel();
             this.metroLabelPhone = new MetroFramework.Controls.MetroLabel();
             this.metroLabelCNP = new MetroFramework.Controls.MetroLabel();
             this.metroLabelLastName = new MetroFramework.Controls.MetroLabel();
             this.metroLabelFirstName = new MetroFramework.Controls.MetroLabel();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             // 
             // metroComboBoxRole
             // 
+            this.metroComboBoxRole.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "RoleID", true));
             this.metroComboBoxRole.FormattingEnabled = true;
             this.metroComboBoxRole.ItemHeight = 24;
             this.metroComboBoxRole.Location = new System.Drawing.Point(129, 173);
@@ -95,6 +96,7 @@
             // metroTextBoxAdress
             // 
             this.metroTextBoxAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroTextBoxAdress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Adress", true));
             this.metroTextBoxAdress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBoxAdress.Location = new System.Drawing.Point(128, 272);
             this.metroTextBoxAdress.Multiline = true;
@@ -105,6 +107,7 @@
             // metroTextBoxPhone
             // 
             this.metroTextBoxPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroTextBoxPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Phone", true));
             this.metroTextBoxPhone.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBoxPhone.Location = new System.Drawing.Point(128, 241);
             this.metroTextBoxPhone.Name = "metroTextBoxPhone";
@@ -114,6 +117,7 @@
             // metroTextBoxCNP
             // 
             this.metroTextBoxCNP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroTextBoxCNP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "CNP", true));
             this.metroTextBoxCNP.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBoxCNP.Location = new System.Drawing.Point(129, 212);
             this.metroTextBoxCNP.Name = "metroTextBoxCNP";
@@ -123,15 +127,21 @@
             // metroTextBoxLastName
             // 
             this.metroTextBoxLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroTextBoxLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "LastName", true));
             this.metroTextBoxLastName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBoxLastName.Location = new System.Drawing.Point(129, 139);
             this.metroTextBoxLastName.Name = "metroTextBoxLastName";
             this.metroTextBoxLastName.Size = new System.Drawing.Size(291, 23);
             this.metroTextBoxLastName.TabIndex = 9;
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(Manager.Employee);
+            // 
             // metroTextBoxFirstName
             // 
             this.metroTextBoxFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroTextBoxFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "FirstName", true));
             this.metroTextBoxFirstName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBoxFirstName.Location = new System.Drawing.Point(129, 110);
             this.metroTextBoxFirstName.Name = "metroTextBoxFirstName";
@@ -197,10 +207,6 @@
             this.metroLabelFirstName.Size = new System.Drawing.Size(83, 20);
             this.metroLabelFirstName.TabIndex = 15;
             this.metroLabelFirstName.Text = "First Name:";
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(Manager.Employee);
             // 
             // EmployeeDetails
             // 

@@ -31,7 +31,7 @@ namespace Manager
 
         private async void mtEmployeePanelAdd_Click(object sender, EventArgs e)
         {
-            using (EmployeeDetails employeeDetails = new EmployeeDetails())
+            using (EmployeeDetails employeeDetails = new EmployeeDetails(new Employee() { EmployeeID = -1 }))
             {
                 if(employeeDetails.ShowDialog()==DialogResult.OK)
                 {

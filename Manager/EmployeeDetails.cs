@@ -12,9 +12,10 @@ namespace Manager
 {
     public partial class EmployeeDetails : MetroFramework.Forms.MetroForm
     {
-        public EmployeeDetails()
+        public EmployeeDetails(Employee obj)
         {
             InitializeComponent();
+            employeeBindingSource.DataSource = obj;
         }
         /// <summary>
         /// returns the current bindingsource
@@ -32,6 +33,7 @@ namespace Manager
 
             metroComboBoxRole.DisplayMember = "Name";
             metroComboBoxRole.ValueMember = "RoleID";
+            metroTextBoxAdress.Text = "La panarama";
             using (RestaurantDBEntities context = new RestaurantDBEntities())
             {
                 metroComboBoxRole.DataSource = context.Roles.ToList();
