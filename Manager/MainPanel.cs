@@ -31,5 +31,13 @@ namespace Manager
         {
 
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            using (SupplierPanel supplierPanel = new SupplierPanel())
+            {
+                supplierPanel.ShowDialog();
+            }
+        }
     }
 }
