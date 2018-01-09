@@ -33,7 +33,7 @@ namespace Manager
 
             metroComboBoxRole.DisplayMember = "Name";
             metroComboBoxRole.ValueMember = "RoleID";
-            metroTextBoxAdress.Text = "La panarama";
+        
             using (RestaurantDBEntities context = new RestaurantDBEntities())
             {
                 metroComboBoxRole.DataSource = context.Roles.ToList();
