@@ -85,8 +85,8 @@ namespace Manager
 			{
 				if (MessageBox.Show("Do you want to delete the record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
-					context.Products.Remove(productBindingSource.Current as Product);
 					productBindingSource.Remove(productBindingSource.Current as Product);
+					context.Products.Remove(productBindingSource.Current as Product);
 				}
 			}
 			catch (Exception ex)
