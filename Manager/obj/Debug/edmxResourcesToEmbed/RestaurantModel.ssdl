@@ -104,7 +104,7 @@ warning 6002: The table/view 'RestaurantDB.dbo.InvoiceUnit' does not have a prim
     <Key>
       <PropertyRef Name="SupplierID" />
     </Key>
-    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Adress" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="CIF" Type="nchar" MaxLength="12" Nullable="false" />

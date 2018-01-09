@@ -32,6 +32,7 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.mt = new MetroFramework.Controls.MetroTile();
             this.mtEmployees = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // metroTile4
@@ -84,12 +85,24 @@
             this.mtEmployees.UseTileImage = true;
             this.mtEmployees.Click += new System.EventHandler(this.mtEmployees_Click);
             // 
+            // metroTile1
+            // 
+            this.metroTile1.Location = new System.Drawing.Point(119, 177);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(90, 78);
+            this.metroTile1.TabIndex = 1;
+            this.metroTile1.Text = "Suppliers";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
             // MainPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.mt);
@@ -107,6 +120,7 @@
         private MetroFramework.Controls.MetroTile mt;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }
 

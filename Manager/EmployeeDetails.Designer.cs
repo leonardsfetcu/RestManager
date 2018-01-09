@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.metroLabelCNP);
             this.panel1.Controls.Add(this.metroLabelLastName);
             this.panel1.Controls.Add(this.metroLabelFirstName);
-            this.panel1.Location = new System.Drawing.Point(23, 85);
+            this.panel1.Location = new System.Drawing.Point(23, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(490, 376);
             this.panel1.TabIndex = 22;
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(536, 462);
+            this.ClientSize = new System.Drawing.Size(540, 450);
             this.Controls.Add(this.panel1);
             this.Name = "EmployeeDetails";
             this.Text = "Employee Details";

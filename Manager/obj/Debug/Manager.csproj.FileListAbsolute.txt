@@ -34,3 +34,5 @@ C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.cspr
 C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
 C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.exe
 C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.pdb
+C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.SupplierDetails.resources
+C:\Users\Leonard\Source\Repos\Manager\RestManager\Manager\obj\Debug\Manager.SupplierPanel.resources
