@@ -34,7 +34,7 @@ namespace Manager
             metroComboBoxRole.DisplayMember = "Name";
             metroComboBoxRole.ValueMember = "RoleID";
         
-            using (RestaurantDBEntities context = new RestaurantDBEntities())
+            using (RestaurantDBEntities context = new RestaurantDBEntities("name=RestaurantDBEntities"))
             {
                 metroComboBoxRole.DataSource = context.Roles.ToList();
             }

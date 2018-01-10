@@ -18,7 +18,7 @@ namespace Manager
         public EmployeePanel()
         {
             InitializeComponent();
-            context = new RestaurantDBEntities();
+            context = new RestaurantDBEntities("name=RestaurantDBEntities");
 
         }
      
@@ -130,8 +130,9 @@ namespace Manager
         {
             if(isUpdated==false)
             {
-                if(MessageBox.Show("Do you want to exit without save?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+                if(MessageBox.Show("Do you want to save before exit?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
                 {
+                    
                 }
                 
             }
