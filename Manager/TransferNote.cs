@@ -14,12 +14,11 @@ namespace Manager
     
     public partial class TransferNote
     {
-        public int StoreID { get; set; }
+        public int ProductID { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public int EmployeeID { get; set; }
     
-        public virtual Employee Employee { get; set; }
-        public virtual Store Store { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
