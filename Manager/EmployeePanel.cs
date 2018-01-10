@@ -33,9 +33,9 @@ namespace Manager
 
         private async void mtEmployeePanelAdd_Click(object sender, EventArgs e)
         {
-            using (EmployeeDetails employeeDetails = new EmployeeDetails(new Employee() ))
+			using (EmployeeDetails employeeDetails = new EmployeeDetails(new Employee()))
             {
-                if(employeeDetails.ShowDialog()==DialogResult.OK)
+                if (employeeDetails.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
@@ -43,7 +43,7 @@ namespace Manager
                         context.Employees.Add(employeeDetails.EmployeeInfo);
                         await context.SaveChangesAsync();
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

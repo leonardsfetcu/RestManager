@@ -237,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -249,7 +248,6 @@
         private MetroFramework.Controls.MetroTile mtEmployeePanelSave;
         private System.Windows.Forms.BindingSource roleBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private System.Windows.Forms.BindingSource employeeBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

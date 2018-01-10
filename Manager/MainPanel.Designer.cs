@@ -111,7 +111,6 @@
             this.Text = "Restaurant Manager PRO";
             this.Load += new System.EventHandler(this.MainPanel_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion

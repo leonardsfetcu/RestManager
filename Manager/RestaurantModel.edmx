@@ -81,7 +81,7 @@ warning 6002: The table/view 'RestaurantDB.dbo.InvoiceUnit' does not have a prim
           <Key>
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" />
           <Property Name="UnitPrice" Type="money" Nullable="false" />
           <Property Name="TVA" Type="float" Nullable="false" />
