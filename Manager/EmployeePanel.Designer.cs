@@ -46,11 +46,9 @@
             this.mtEmployeePanelEdit = new MetroFramework.Controls.MetroTile();
             this.mtEmployeePanelAdd = new MetroFramework.Controls.MetroTile();
             this.mtEmployeePanelRefresh = new MetroFramework.Controls.MetroTile();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn1
@@ -213,10 +211,6 @@
             this.mtEmployeePanelRefresh.UseTileImage = true;
             this.mtEmployeePanelRefresh.Click += new System.EventHandler(this.mtEmployeePanelRefresh_Click);
             // 
-            // employeeBindingSource1
-            // 
-            this.employeeBindingSource1.DataSource = typeof(Manager.Employee);
-            // 
             // EmployeePanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -235,7 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             this.ResumeLayout(false);
         }
 

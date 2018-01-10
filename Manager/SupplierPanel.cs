@@ -18,7 +18,7 @@ namespace Manager
         public SupplierPanel()
         {
             InitializeComponent();
-            context = new RestaurantDBEntities("name=RestaurantDBEntities");
+            context = new RestaurantDBEntities();
         }
 
         private void SupplierPanel_Load(object sender, EventArgs e)

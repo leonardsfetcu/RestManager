@@ -18,7 +18,7 @@ namespace Manager
         public EmployeePanel()
         {
             InitializeComponent();
-            context = new RestaurantDBEntities("name=RestaurantDBEntities");
+            context = new RestaurantDBEntities();
 
         }
      

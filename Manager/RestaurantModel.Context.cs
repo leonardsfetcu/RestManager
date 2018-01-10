@@ -15,8 +15,8 @@ namespace Manager
     
     public partial class RestaurantDBEntities : DbContext
     {
-        public RestaurantDBEntities(string config)
-            : base(config)
+        public RestaurantDBEntities()
+            : base("name=RestaurantDBEntities")
         {
         }
     

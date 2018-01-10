@@ -32,12 +32,20 @@ namespace Manager
 
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
-        {
-            using (SupplierPanel supplierPanel = new SupplierPanel())
-            {
-                supplierPanel.ShowDialog();
-            }
-        }
-    }
+		private void metroTile1_Click(object sender, EventArgs e)
+		{
+			using (SupplierPanel supplierPanel = new SupplierPanel())
+			{
+				supplierPanel.ShowDialog();
+			}
+		}
+
+		private void metroTileProducts_Click(object sender, EventArgs e)
+		{
+			using (ProductsPanel productsPanel = new ProductsPanel())
+			{
+				productsPanel.ShowDialog();
+			}
+		}
+	}
 }
