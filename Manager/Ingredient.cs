@@ -18,7 +18,7 @@ namespace Manager
         public int ProductID { get; set; }
         public int Quantity { get; set; }
     
-        public virtual Menu Menu { get; set; }
         public virtual Product Product { get; set; }
+        public virtual Menu Menu { get; set; }
     }
 }

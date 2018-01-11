@@ -24,7 +24,7 @@ namespace Manager
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string Type { get; set; }
-        public Nullable<System.TimeSpan> CookingTime { get; set; }
+        public Nullable<int> CookingTime { get; set; }
         public byte[] Image { get; set; }
         public string Weight { get; set; }
     

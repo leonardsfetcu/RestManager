@@ -29,7 +29,6 @@ namespace Manager
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Kitchen> Kitchens { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Store> Stores { get; set; }
@@ -39,5 +38,6 @@ namespace Manager
         public virtual DbSet<Ingredient> Ingredients { get; set; }
         public virtual DbSet<InvoiceUnit> InvoiceUnits { get; set; }
         public virtual DbSet<TransferNote> TransferNotes { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
     }
 }
