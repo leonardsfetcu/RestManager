@@ -18,11 +18,14 @@ namespace Manager
         public Employee()
         {
             this.Invoices = new HashSet<Invoice>();
+            this.TransferNotes = new HashSet<TransferNote>();
         }
     
         public int EmployeeID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string CNP { get; set; }
         public string Phone { get; set; }
         public string Adress { get; set; }
@@ -31,5 +34,7 @@ namespace Manager
         public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TransferNote> TransferNotes { get; set; }
     }
 }

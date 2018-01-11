@@ -47,5 +47,13 @@ namespace Manager
 				productsPanel.ShowDialog();
 			}
 		}
+
+		private void metroInvoices_Click(object sender, EventArgs e)
+		{
+			using (InvoicePanel invoicePanel = new InvoicePanel())
+			{
+				invoicePanel.ShowDialog();
+			}
+		}
 	}
 }

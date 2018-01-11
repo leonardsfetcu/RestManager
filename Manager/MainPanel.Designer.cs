@@ -34,6 +34,7 @@
 			this.mtEmployees = new MetroFramework.Controls.MetroTile();
 			this.metroTile1 = new MetroFramework.Controls.MetroTile();
 			this.metroTileProducts = new MetroFramework.Controls.MetroTile();
+			this.metroInvoices = new MetroFramework.Controls.MetroTile();
 			this.SuspendLayout();
 			// 
 			// metroTile4
@@ -108,6 +109,17 @@
 			this.metroTileProducts.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
 			this.metroTileProducts.Click += new System.EventHandler(this.metroTileProducts_Click);
 			// 
+			// metroInvoices
+			// 
+			this.metroInvoices.Location = new System.Drawing.Point(217, 177);
+			this.metroInvoices.Name = "metroInvoices";
+			this.metroInvoices.Size = new System.Drawing.Size(90, 78);
+			this.metroInvoices.TabIndex = 0;
+			this.metroInvoices.Text = "Invoices";
+			this.metroInvoices.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.metroInvoices.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.metroInvoices.Click += new System.EventHandler(this.metroInvoices_Click);
+			// 
 			// MainPanel
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -116,6 +128,7 @@
 			this.ClientSize = new System.Drawing.Size(1280, 720);
 			this.Controls.Add(this.metroTileProducts);
 			this.Controls.Add(this.metroTile1);
+			this.Controls.Add(this.metroInvoices);
 			this.Controls.Add(this.metroTile4);
 			this.Controls.Add(this.metroTile3);
 			this.Controls.Add(this.mt);
@@ -135,6 +148,7 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile1;
 		private MetroFramework.Controls.MetroTile metroTileProducts;
+		private MetroFramework.Controls.MetroTile metroInvoices;
 	}
 }
 

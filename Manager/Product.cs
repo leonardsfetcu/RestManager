@@ -18,7 +18,7 @@ namespace Manager
         public Product()
         {
             this.Ingredients = new HashSet<Ingredient>();
-            this.TransferNotes = new HashSet<TransferNote>();
+            this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
             this.InvoiceUnits = new HashSet<InvoiceUnit>();
         }
     
@@ -36,7 +36,7 @@ namespace Manager
         public virtual ICollection<Ingredient> Ingredients { get; set; }
         public virtual Unit Unit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransferNote> TransferNotes { get; set; }
+        public virtual ICollection<TransfetNoteUnit> TransfetNoteUnits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InvoiceUnit> InvoiceUnits { get; set; }
     }
