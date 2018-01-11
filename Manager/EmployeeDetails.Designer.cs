@@ -102,10 +102,10 @@
             // 
             this.metroComboBoxRole.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "RoleID", true));
             this.metroComboBoxRole.FormattingEnabled = true;
-            this.metroComboBoxRole.ItemHeight = 24;
+            this.metroComboBoxRole.ItemHeight = 23;
             this.metroComboBoxRole.Location = new System.Drawing.Point(111, 88);
             this.metroComboBoxRole.Name = "metroComboBoxRole";
-            this.metroComboBoxRole.Size = new System.Drawing.Size(152, 30);
+            this.metroComboBoxRole.Size = new System.Drawing.Size(152, 29);
             this.metroComboBoxRole.TabIndex = 24;
             // 
             // metroLabelRole
@@ -116,7 +116,7 @@
             this.metroLabelRole.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelRole.Location = new System.Drawing.Point(22, 88);
             this.metroLabelRole.Name = "metroLabelRole";
-            this.metroLabelRole.Size = new System.Drawing.Size(42, 20);
+            this.metroLabelRole.Size = new System.Drawing.Size(38, 19);
             this.metroLabelRole.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroLabelRole.TabIndex = 31;
             this.metroLabelRole.Text = "Role:";
@@ -180,7 +180,7 @@
             this.metroLabelAdress.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelAdress.Location = new System.Drawing.Point(22, 188);
             this.metroLabelAdress.Name = "metroLabelAdress";
-            this.metroLabelAdress.Size = new System.Drawing.Size(56, 20);
+            this.metroLabelAdress.Size = new System.Drawing.Size(53, 19);
             this.metroLabelAdress.TabIndex = 25;
             this.metroLabelAdress.Text = "Adress:";
             // 
@@ -192,7 +192,7 @@
             this.metroLabelPhone.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelPhone.Location = new System.Drawing.Point(22, 157);
             this.metroLabelPhone.Name = "metroLabelPhone";
-            this.metroLabelPhone.Size = new System.Drawing.Size(53, 20);
+            this.metroLabelPhone.Size = new System.Drawing.Size(51, 19);
             this.metroLabelPhone.TabIndex = 26;
             this.metroLabelPhone.Text = "Phone:";
             // 
@@ -204,7 +204,7 @@
             this.metroLabelCNP.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelCNP.Location = new System.Drawing.Point(22, 128);
             this.metroLabelCNP.Name = "metroLabelCNP";
-            this.metroLabelCNP.Size = new System.Drawing.Size(40, 20);
+            this.metroLabelCNP.Size = new System.Drawing.Size(39, 19);
             this.metroLabelCNP.TabIndex = 27;
             this.metroLabelCNP.Text = "CNP:";
             // 
@@ -216,7 +216,7 @@
             this.metroLabelLastName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelLastName.Location = new System.Drawing.Point(22, 55);
             this.metroLabelLastName.Name = "metroLabelLastName";
-            this.metroLabelLastName.Size = new System.Drawing.Size(82, 20);
+            this.metroLabelLastName.Size = new System.Drawing.Size(77, 19);
             this.metroLabelLastName.TabIndex = 28;
             this.metroLabelLastName.Text = "Last Name:";
             // 
@@ -228,7 +228,7 @@
             this.metroLabelFirstName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabelFirstName.Location = new System.Drawing.Point(22, 26);
             this.metroLabelFirstName.Name = "metroLabelFirstName";
-            this.metroLabelFirstName.Size = new System.Drawing.Size(83, 20);
+            this.metroLabelFirstName.Size = new System.Drawing.Size(78, 19);
             this.metroLabelFirstName.TabIndex = 29;
             this.metroLabelFirstName.Text = "First Name:";
             // 
