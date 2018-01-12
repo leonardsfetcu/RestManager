@@ -117,6 +117,7 @@ namespace Manager
         private void MenuPanel_Load(object sender, EventArgs e)
         {
             menuBindingSource.DataSource = context.Menus.ToList();
+            typeBindingSource.DataSource = context.Types.ToList();
             //roleBindingSource.DataSource = context.Roles.ToList();
         }
     }

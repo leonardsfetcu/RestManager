@@ -53,5 +53,10 @@ namespace Manager
 			ProductInfo.TVA = x;
 			DialogResult = DialogResult.OK;
 		}
-	}
+
+        private void metroTileCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

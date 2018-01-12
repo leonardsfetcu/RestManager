@@ -35,14 +35,16 @@
             this.mtDelete = new MetroFramework.Controls.MetroTile();
             this.mtSave = new MetroFramework.Controls.MetroTile();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cookingTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.CookingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mtRefresh
@@ -96,50 +98,59 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.cookingTimeDataGridViewTextBoxColumn,
-            this.weightDataGridViewTextBoxColumn});
+            this.Name,
+            this.TypeID,
+            this.CookingTime,
+            this.Weight,
+            this.Price});
             this.dataGridView1.DataSource = this.menuBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(23, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(681, 211);
             this.dataGridView1.TabIndex = 1;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // cookingTimeDataGridViewTextBoxColumn
-            // 
-            this.cookingTimeDataGridViewTextBoxColumn.DataPropertyName = "CookingTime";
-            this.cookingTimeDataGridViewTextBoxColumn.HeaderText = "CookingTime";
-            this.cookingTimeDataGridViewTextBoxColumn.Name = "cookingTimeDataGridViewTextBoxColumn";
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            // 
             // menuBindingSource
             // 
             this.menuBindingSource.DataSource = typeof(Manager.Menu);
+            // 
+            // typeBindingSource
+            // 
+            this.typeBindingSource.DataSource = typeof(Manager.Type);
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // TypeID
+            // 
+            this.TypeID.DataPropertyName = "TypeID";
+            this.TypeID.DataSource = this.typeBindingSource;
+            this.TypeID.DisplayMember = "Name";
+            this.TypeID.HeaderText = "Type";
+            this.TypeID.Name = "TypeID";
+            this.TypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TypeID.ValueMember = "TypeID";
+            // 
+            // CookingTime
+            // 
+            this.CookingTime.DataPropertyName = "CookingTime";
+            this.CookingTime.HeaderText = "CookingTime";
+            this.CookingTime.Name = "CookingTime";
+            // 
+            // Weight
+            // 
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
             // 
             // MenuPanel
             // 
@@ -152,11 +163,12 @@
             this.Controls.Add(this.mtEdit);
             this.Controls.Add(this.mtAdd);
             this.Controls.Add(this.mtRefresh);
-            this.Name = "MenuPanel";
+          //  this.Name = "Menu Panel";
             this.Text = "Menu Panel";
             this.Load += new System.EventHandler(this.MenuPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,11 +181,12 @@
         private MetroFramework.Controls.MetroTile mtDelete;
         private MetroFramework.Controls.MetroTile mtSave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cookingTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource menuBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TypeID;
+        private System.Windows.Forms.BindingSource typeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CookingTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }
