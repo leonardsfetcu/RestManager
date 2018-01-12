@@ -31,43 +31,43 @@
 			this.components = new System.ComponentModel.Container();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxSuppliers = new MetroFramework.Controls.MetroComboBox();
+			this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButtonAddSupplier = new MetroFramework.Controls.MetroButton();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxEmployee = new MetroFramework.Controls.MetroComboBox();
+			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButton1 = new MetroFramework.Controls.MetroButton();
 			this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
+			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.CategoryID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.UnitID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.unitsInStoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButton2 = new MetroFramework.Controls.MetroButton();
 			this.metroTextBoxQuantity = new MetroFramework.Controls.MetroTextBox();
+			this.invoiceUnitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxProduct = new MetroFramework.Controls.MetroComboBox();
 			this.metroButton3 = new MetroFramework.Controls.MetroButton();
 			this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-			this.invoiceUnitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CategoryID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.UnitID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.unitsInStoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.metroTileFinish = new MetroFramework.Controls.MetroTile();
+			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// metroLabel1
@@ -91,6 +91,10 @@
 			this.metroComboBoxSuppliers.Size = new System.Drawing.Size(232, 29);
 			this.metroComboBoxSuppliers.TabIndex = 2;
 			// 
+			// supplierBindingSource
+			// 
+			this.supplierBindingSource.DataSource = typeof(Manager.Supplier);
+			// 
 			// metroButtonAddSupplier
 			// 
 			this.metroButtonAddSupplier.Location = new System.Drawing.Point(394, 88);
@@ -107,6 +111,10 @@
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
 			this.dateTimePicker1.TabIndex = 4;
+			// 
+			// invoiceBindingSource
+			// 
+			this.invoiceBindingSource.DataSource = typeof(Manager.Invoice);
 			// 
 			// metroLabel2
 			// 
@@ -140,6 +148,10 @@
 			this.metroComboBoxEmployee.Size = new System.Drawing.Size(232, 29);
 			this.metroComboBoxEmployee.TabIndex = 2;
 			// 
+			// employeeBindingSource
+			// 
+			this.employeeBindingSource.DataSource = typeof(Manager.Employee);
+			// 
 			// metroButton1
 			// 
 			this.metroButton1.Location = new System.Drawing.Point(393, 123);
@@ -152,7 +164,6 @@
 			// dataGridViewProducts
 			// 
 			this.dataGridViewProducts.AllowUserToAddRows = false;
-			this.dataGridViewProducts.AllowUserToDeleteRows = false;
 			this.dataGridViewProducts.AutoGenerateColumns = false;
 			this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -165,8 +176,74 @@
 			this.dataGridViewProducts.DataSource = this.productBindingSource;
 			this.dataGridViewProducts.Location = new System.Drawing.Point(24, 318);
 			this.dataGridViewProducts.Name = "dataGridViewProducts";
+			this.dataGridViewProducts.ReadOnly = true;
 			this.dataGridViewProducts.Size = new System.Drawing.Size(455, 194);
 			this.dataGridViewProducts.TabIndex = 5;
+			// 
+			// nameDataGridViewTextBoxColumn
+			// 
+			this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+			this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+			this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+			this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// unitPriceDataGridViewTextBoxColumn
+			// 
+			this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice";
+			this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
+			this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
+			this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
+			this.unitPriceDataGridViewTextBoxColumn.Width = 60;
+			// 
+			// tVADataGridViewTextBoxColumn
+			// 
+			this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
+			this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
+			this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
+			this.tVADataGridViewTextBoxColumn.ReadOnly = true;
+			this.tVADataGridViewTextBoxColumn.Width = 40;
+			// 
+			// CategoryID
+			// 
+			this.CategoryID.DataPropertyName = "CategoryID";
+			this.CategoryID.DataSource = this.categoryBindingSource;
+			this.CategoryID.DisplayMember = "Name";
+			this.CategoryID.HeaderText = "Category";
+			this.CategoryID.Name = "CategoryID";
+			this.CategoryID.ReadOnly = true;
+			this.CategoryID.ValueMember = "CategoryID";
+			this.CategoryID.Width = 70;
+			// 
+			// categoryBindingSource
+			// 
+			this.categoryBindingSource.DataSource = typeof(Manager.Category);
+			// 
+			// UnitID
+			// 
+			this.UnitID.DataPropertyName = "UnitID";
+			this.UnitID.DataSource = this.unitBindingSource;
+			this.UnitID.DisplayMember = "Name";
+			this.UnitID.HeaderText = "Unit";
+			this.UnitID.Name = "UnitID";
+			this.UnitID.ReadOnly = true;
+			this.UnitID.ValueMember = "UnitID";
+			this.UnitID.Width = 60;
+			// 
+			// unitBindingSource
+			// 
+			this.unitBindingSource.DataSource = typeof(Manager.Unit);
+			// 
+			// unitsInStoreDataGridViewTextBoxColumn
+			// 
+			this.unitsInStoreDataGridViewTextBoxColumn.DataPropertyName = "UnitsInStore";
+			this.unitsInStoreDataGridViewTextBoxColumn.HeaderText = "Quantity";
+			this.unitsInStoreDataGridViewTextBoxColumn.Name = "unitsInStoreDataGridViewTextBoxColumn";
+			this.unitsInStoreDataGridViewTextBoxColumn.ReadOnly = true;
+			this.unitsInStoreDataGridViewTextBoxColumn.Width = 80;
+			// 
+			// productBindingSource
+			// 
+			this.productBindingSource.DataSource = typeof(Manager.Product);
 			// 
 			// metroButton2
 			// 
@@ -184,6 +261,10 @@
 			this.metroTextBoxQuantity.Name = "metroTextBoxQuantity";
 			this.metroTextBoxQuantity.Size = new System.Drawing.Size(85, 23);
 			this.metroTextBoxQuantity.TabIndex = 6;
+			// 
+			// invoiceUnitBindingSource
+			// 
+			this.invoiceUnitBindingSource.DataSource = typeof(Manager.InvoiceUnit);
 			// 
 			// metroLabel4
 			// 
@@ -249,81 +330,6 @@
 			this.metroLabel7.TabIndex = 1;
 			this.metroLabel7.Text = "Or add a new one:";
 			// 
-			// invoiceUnitBindingSource
-			// 
-			this.invoiceUnitBindingSource.DataSource = typeof(Manager.InvoiceUnit);
-			// 
-			// categoryBindingSource
-			// 
-			this.categoryBindingSource.DataSource = typeof(Manager.Category);
-			// 
-			// unitBindingSource
-			// 
-			this.unitBindingSource.DataSource = typeof(Manager.Unit);
-			// 
-			// productBindingSource
-			// 
-			this.productBindingSource.DataSource = typeof(Manager.Product);
-			// 
-			// invoiceBindingSource
-			// 
-			this.invoiceBindingSource.DataSource = typeof(Manager.Invoice);
-			// 
-			// employeeBindingSource
-			// 
-			this.employeeBindingSource.DataSource = typeof(Manager.Employee);
-			// 
-			// supplierBindingSource
-			// 
-			this.supplierBindingSource.DataSource = typeof(Manager.Supplier);
-			// 
-			// nameDataGridViewTextBoxColumn
-			// 
-			this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-			this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-			this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-			// 
-			// unitPriceDataGridViewTextBoxColumn
-			// 
-			this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice";
-			this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
-			this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
-			this.unitPriceDataGridViewTextBoxColumn.Width = 60;
-			// 
-			// tVADataGridViewTextBoxColumn
-			// 
-			this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
-			this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
-			this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
-			this.tVADataGridViewTextBoxColumn.Width = 40;
-			// 
-			// CategoryID
-			// 
-			this.CategoryID.DataPropertyName = "CategoryID";
-			this.CategoryID.DataSource = this.categoryBindingSource;
-			this.CategoryID.DisplayMember = "Name";
-			this.CategoryID.HeaderText = "Category";
-			this.CategoryID.Name = "CategoryID";
-			this.CategoryID.ValueMember = "CategoryID";
-			this.CategoryID.Width = 70;
-			// 
-			// UnitID
-			// 
-			this.UnitID.DataPropertyName = "UnitID";
-			this.UnitID.DataSource = this.unitBindingSource;
-			this.UnitID.DisplayMember = "Name";
-			this.UnitID.HeaderText = "Unit";
-			this.UnitID.Name = "UnitID";
-			this.UnitID.ValueMember = "UnitID";
-			this.UnitID.Width = 60;
-			// 
-			// unitsInStoreDataGridViewTextBoxColumn
-			// 
-			this.unitsInStoreDataGridViewTextBoxColumn.DataPropertyName = "UnitsInStore";
-			this.unitsInStoreDataGridViewTextBoxColumn.HeaderText = "Quantity";
-			this.unitsInStoreDataGridViewTextBoxColumn.Name = "unitsInStoreDataGridViewTextBoxColumn";
-			this.unitsInStoreDataGridViewTextBoxColumn.Width = 80;
-			// 
 			// metroTileFinish
 			// 
 			this.metroTileFinish.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -361,14 +367,14 @@
 			this.Name = "InvoiceDetails";
 			this.Text = "Invoice";
 			this.Load += new System.EventHandler(this.InvoiceDetails_Load);
+			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

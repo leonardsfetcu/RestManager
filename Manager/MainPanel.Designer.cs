@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-          this.metroTile4 = new MetroFramework.Controls.MetroTile();
           this.metroTile3 = new MetroFramework.Controls.MetroTile();
           this.mt = new MetroFramework.Controls.MetroTile();
           this.mtEmployees = new MetroFramework.Controls.MetroTile();
@@ -36,16 +35,6 @@
           this.metroTileProducts = new MetroFramework.Controls.MetroTile();
           this.metroInvoices = new MetroFramework.Controls.MetroTile();
           this.SuspendLayout();
-          // 
-          // metroTile4
-          // 
-          this.metroTile4.Location = new System.Drawing.Point(313, 93);
-          this.metroTile4.Name = "metroTile4";
-          this.metroTile4.Size = new System.Drawing.Size(90, 78);
-          this.metroTile4.TabIndex = 0;
-          this.metroTile4.Text = "metroTile1";
-          this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-          this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
           // 
           // metroTile3
           // 
@@ -129,7 +118,6 @@
           this.Controls.Add(this.metroTileProducts);
           this.Controls.Add(this.metroTile1);
           this.Controls.Add(this.metroInvoices);
-          this.Controls.Add(this.metroTile4);
           this.Controls.Add(this.metroTile3);
           this.Controls.Add(this.mt);
           this.Controls.Add(this.mtEmployees);

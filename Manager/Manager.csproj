@@ -194,11 +194,6 @@
     </Compile>
     <Compile Include="Type.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    <Compile Include="TransferNotePanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransferNotePanel.Designer.cs">
-      <DependentUpon>TransferNotePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Unit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -245,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierPanel.resx">
       <DependentUpon>SupplierPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransferNotePanel.resx">
-      <DependentUpon>TransferNotePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />

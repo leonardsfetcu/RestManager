@@ -90,6 +90,11 @@ namespace Manager
 						try
 						{
 							CurrentProduct = productDetails.ProductInfo;
+							CurrentProduct.ProductID = -1;
+							CurrentProduct.UnitsInStore = 0;
+							CurrentProduct.UnitsInKitchen = 0;
+							context.Products.Add(CurrentProduct);
+							context.SaveChanges();
 						}
 						catch (Exception ex)
 						{
@@ -128,7 +133,7 @@ namespace Manager
 				context.Invoices.Add(invoice);
 				context.SaveChanges();
 
-
+				invoiceUnit.InvoiceUnitID = -1;
 				invoiceUnit.InvoiceID = invoice.InvoiceID; ;
 				foreach (Product prod in productBindingSource.List)
 				{
