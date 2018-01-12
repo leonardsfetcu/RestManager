@@ -48,6 +48,14 @@ namespace Manager
 			}
 		}
 
+		private void metroInvoices_Click(object sender, EventArgs e)
+		{
+			using (InvoicePanel invoicePanel = new InvoicePanel())
+			{
+				invoicePanel.ShowDialog();
+			}
+		}
+	}
         private void metroTile4_Click(object sender, EventArgs e)//Menu
         {
             using (MenuPanel menuPanel = new MenuPanel())

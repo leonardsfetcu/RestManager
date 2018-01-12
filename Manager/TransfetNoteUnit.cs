@@ -12,14 +12,13 @@ namespace Manager
     using System;
     using System.Collections.Generic;
     
-    public partial class InvoiceUnit
+    public partial class TransfetNoteUnit
     {
-        public int InvoiceUnitID { get; set; }
-        public int InvoiceID { get; set; }
+        public int TransferNoteID { get; set; }
         public int ProductID { get; set; }
         public int Quantity { get; set; }
     
-        public virtual Invoice Invoice { get; set; }
         public virtual Product Product { get; set; }
+        public virtual TransferNote TransferNote { get; set; }
     }
 }

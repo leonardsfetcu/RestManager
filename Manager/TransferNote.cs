@@ -14,11 +14,18 @@ namespace Manager
     
     public partial class TransferNote
     {
-        public int ProductID { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public int EmployeeID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TransferNote()
+        {
+            this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
+        }
     
-        public virtual Product Product { get; set; }
+        public int TransferNoteID { get; set; }
+        public int EmployeeID { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+    
+        public virtual Employee Employee { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TransfetNoteUnit> TransfetNoteUnits { get; set; }
     }
 }

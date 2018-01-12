@@ -17,9 +17,9 @@ namespace Manager
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Ingredients = new HashSet<Ingredient>();
-            this.TransferNotes = new HashSet<TransferNote>();
             this.InvoiceUnits = new HashSet<InvoiceUnit>();
+            this.Ingredients = new HashSet<Ingredient>();
+            this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
         }
     
         public int ProductID { get; set; }
@@ -33,11 +33,11 @@ namespace Manager
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InvoiceUnit> InvoiceUnits { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ingredient> Ingredients { get; set; }
         public virtual Unit Unit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransferNote> TransferNotes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InvoiceUnit> InvoiceUnits { get; set; }
+        public virtual ICollection<TransfetNoteUnit> TransfetNoteUnits { get; set; }
     }
 }
