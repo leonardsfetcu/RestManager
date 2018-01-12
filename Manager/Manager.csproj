@@ -88,6 +88,15 @@
     <Compile Include="Invoice.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetails.Designer.cs">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceInfo.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="InvoicePanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +192,9 @@
     <EmbeddedResource Include="EmployeePanel.resx">
       <DependentUpon>EmployeePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetails.resx">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InvoicePanel.resx">
       <DependentUpon>InvoicePanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +227,7 @@
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Invoice.datasource" />
+    <None Include="Properties\DataSources\InvoiceUnit.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Role.datasource" />
     <None Include="Properties\DataSources\Supplier.datasource" />

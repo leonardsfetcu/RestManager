@@ -21,31 +21,37 @@ namespace Manager
 
 		private void InvoicePanel_Load(object sender, EventArgs e)
 		{
-			dataGridView1.DataSource = context.Suppliers.ToList();
 			supplierBindingSource.DataSource = context.Suppliers.ToList();
-			//dataGridView2.DataSource = context.Invoices.ToList();
 			invoiceBindingSource.DataSource = context.Invoices.ToList();
 			employeeBindingSource.DataSource = context.Employees.ToList();
+
+			dataGridView1.DataSource = supplierBindingSource;
 		}
 
-		private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+		private async void metroTileAdd_Click(object sender, EventArgs e)
 		{
-			var stins = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-			var sup = context.Suppliers.Where(a => a.Name == stins).ToList();
-			Supplier s = new Supplier();
-			if (sup.Count > 0)
+			using (InvoiceDetails invoiceDetails = new InvoiceDetails(new Invoice() { InvoiceID = -1 }))
 			{
-				s = sup[0];
+				if (invoiceDetails.ShowDialog() == DialogResult.OK)
+				{
+					try
+					{
+						invoiceBindingSource.Add(invoiceDetails.InvoiceInfo);
+						context.Invoices.Add(invoiceDetails.InvoiceInfo);
+						await context.SaveChangesAsync();
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
 			}
-			//var sup = supplierBindingSource.Current as Supplier;
-			var list = context.Invoices.Where(a => a.SupplierID == s.SupplierID).ToList();
-			//dataGridView2.DataSource = null;
-			dataGridView2.DataSource = list;
 		}
 
-		private void supplierBindingSource_CurrentChanged(object sender, EventArgs e)
+		private void dataGridView1_SelectionChanged(object sender, EventArgs e)
 		{
-			MessageBox.Show("DADDA", "dasa");
+			Supplier s = supplierBindingSource.Current as Supplier;
+			if (s != null) dataGridView2.DataSource = context.Invoices.Where(a => a.SupplierID == s.SupplierID).ToList();
 		}
 	}
 }

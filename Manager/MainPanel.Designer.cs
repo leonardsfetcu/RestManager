@@ -89,7 +89,7 @@
 			// 
 			// metroTile1
 			// 
-			this.metroTile1.Location = new System.Drawing.Point(119, 177);
+			this.metroTile1.Location = new System.Drawing.Point(119, 421);
 			this.metroTile1.Name = "metroTile1";
 			this.metroTile1.Size = new System.Drawing.Size(90, 78);
 			this.metroTile1.TabIndex = 1;
@@ -100,7 +100,7 @@
 			// 
 			// metroTileProducts
 			// 
-			this.metroTileProducts.Location = new System.Drawing.Point(23, 177);
+			this.metroTileProducts.Location = new System.Drawing.Point(23, 421);
 			this.metroTileProducts.Name = "metroTileProducts";
 			this.metroTileProducts.Size = new System.Drawing.Size(90, 78);
 			this.metroTileProducts.TabIndex = 1;
@@ -125,7 +125,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-			this.ClientSize = new System.Drawing.Size(1280, 720);
+			this.ClientSize = new System.Drawing.Size(793, 534);
 			this.Controls.Add(this.metroTileProducts);
 			this.Controls.Add(this.metroTile1);
 			this.Controls.Add(this.metroInvoices);
