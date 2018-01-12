@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -91,8 +92,11 @@
     <Compile Include="InvoiceUnit.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kitchen.cs">
-      <DependentUpon>RestaurantModel.tt</DependentUpon>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainPanel.cs">
       <SubType>Form</SubType>
@@ -150,9 +154,6 @@
     <Compile Include="Role.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Store.cs">
-      <DependentUpon>RestaurantModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
@@ -174,6 +175,12 @@
     <Compile Include="TransferNote.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TransfetNoteUnit.cs">
+      <DependentUpon>RestaurantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>RestaurantModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Unit.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
@@ -182,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeePanel.resx">
       <DependentUpon>EmployeePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPanel.resx">
       <DependentUpon>MainPanel.cs</DependentUpon>
@@ -221,6 +231,7 @@
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Role.datasource" />
     <None Include="Properties\DataSources\Supplier.datasource" />
+    <None Include="Properties\DataSources\Type.datasource" />
     <None Include="Properties\DataSources\Unit.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

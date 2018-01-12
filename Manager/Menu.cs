@@ -23,12 +23,13 @@ namespace Manager
         public int MenuID { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public string Type { get; set; }
+        public int TypeID { get; set; }
         public Nullable<int> CookingTime { get; set; }
         public byte[] Image { get; set; }
         public string Weight { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ingredient> Ingredients { get; set; }
+        public virtual Type Type { get; set; }
     }
 }
