@@ -12,22 +12,18 @@ namespace Manager
     using System;
     using System.Collections.Generic;
     
-    public partial class TransferNote
+    public partial class Type
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TransferNote()
+        public Type()
         {
-            this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
+            this.Menus = new HashSet<Menu>();
         }
     
-        public int TransferNoteID { get; set; }
-        public int EmployeeID { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public int TypeID { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransfetNoteUnit> TransfetNoteUnits { get; set; }
-        public virtual Employee Employee { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransfetNoteUnit> TransfetNoteUnits { get; set; }
+        public virtual ICollection<Menu> Menus { get; set; }
     }
 }

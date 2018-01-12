@@ -20,6 +20,8 @@ namespace Manager
             this.Ingredients = new HashSet<Ingredient>();
             this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
             this.InvoiceUnits = new HashSet<InvoiceUnit>();
+            this.Ingredients = new HashSet<Ingredient>();
+            this.TransfetNoteUnits = new HashSet<TransfetNoteUnit>();
         }
     
         public int ProductID { get; set; }
@@ -32,6 +34,8 @@ namespace Manager
         public Nullable<int> UnitsInKitchen { get; set; }
     
         public virtual Category Category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InvoiceUnit> InvoiceUnits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ingredient> Ingredients { get; set; }
         public virtual Unit Unit { get; set; }

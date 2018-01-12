@@ -84,6 +84,7 @@
             this.metroTileSave.TileImage = global::Manager.Properties.Resources.icons8_checkmark_64;
             this.metroTileSave.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileSave.UseTileImage = true;
+            this.metroTileSave.Click += new System.EventHandler(this.metroTileSave_Click);
             // 
             // metroTileCancel
             // 
@@ -95,6 +96,7 @@
             this.metroTileCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileCancel.TileImage = global::Manager.Properties.Resources.icons8_delete_64;
             this.metroTileCancel.UseTileImage = true;
+            this.metroTileCancel.Click += new System.EventHandler(this.metroTileCancel_Click);
             // 
             // metroComboBoxRole
             // 
