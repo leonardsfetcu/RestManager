@@ -24,6 +24,7 @@ namespace Manager
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int TypeID { get; set; }
+        public string Type { get; set; }
         public Nullable<int> CookingTime { get; set; }
         public byte[] Image { get; set; }
         public string Weight { get; set; }

@@ -56,4 +56,12 @@ namespace Manager
 			}
 		}
 	}
+        private void metroTile4_Click(object sender, EventArgs e)//Menu
+        {
+            using (MenuPanel menuPanel = new MenuPanel())
+            {
+               menuPanel.ShowDialog();
+            }
+        }
+    }
 }

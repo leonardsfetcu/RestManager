@@ -115,6 +115,18 @@
     <Compile Include="Menu.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MenuDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDetails.Designer.cs">
+      <DependentUpon>MenuDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPanel.Designer.cs">
+      <DependentUpon>MenuPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
@@ -182,6 +194,11 @@
     </Compile>
     <Compile Include="Type.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    <Compile Include="TransferNotePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNotePanel.Designer.cs">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Unit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -200,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPanel.resx">
       <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDetails.resx">
+      <DependentUpon>MenuDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanel.resx">
+      <DependentUpon>MenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductsDetails.resx">
       <DependentUpon>ProductsDetails.cs</DependentUpon>
@@ -223,11 +246,15 @@
     <EmbeddedResource Include="SupplierPanel.resx">
       <DependentUpon>SupplierPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransferNotePanel.resx">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Invoice.datasource" />
     <None Include="Properties\DataSources\InvoiceUnit.datasource" />
+    <None Include="Properties\DataSources\Menu.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Role.datasource" />
     <None Include="Properties\DataSources\Supplier.datasource" />
