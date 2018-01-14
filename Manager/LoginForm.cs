@@ -59,5 +59,11 @@ namespace Manager
                 btnLogin_Click(sender, e);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm signUp = new SignUpForm();
+            signUp.ShowDialog();
+        }
     }
 }

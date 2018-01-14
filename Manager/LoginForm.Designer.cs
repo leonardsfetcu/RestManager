@@ -34,6 +34,7 @@
             this.mtPass = new MetroFramework.Controls.MetroTextBox();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -88,11 +89,23 @@
             this.btnLogin.Text = "&Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(107, 153);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(45, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Sign Up";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 175);
+            this.ClientSize = new System.Drawing.Size(322, 190);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.mtPass);
@@ -115,5 +128,6 @@
         private MetroFramework.Controls.MetroTextBox mtPass;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnLogin;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
