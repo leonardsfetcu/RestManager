@@ -104,6 +104,9 @@
     <Compile Include="InvoiceDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InvoiceInfo.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>

@@ -55,7 +55,7 @@ namespace Manager
                     }
                 }
                 if (!found)
-                    MessageBox.Show("Firstnamd and Last name do not exist in database! Please contact an admin!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Firstname and Lastname do not exist in database! Please contact an admin!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
