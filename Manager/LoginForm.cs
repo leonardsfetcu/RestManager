@@ -18,11 +18,6 @@ namespace Manager
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
@@ -59,5 +54,11 @@ namespace Manager
                 btnLogin_Click(sender, e);
             }
         }
-    }
+
+		private void LoginForm_Shown(object sender, EventArgs e)
+		{
+			Activate();
+			Focus();
+		}
+	}
 }

@@ -31,42 +31,41 @@
 			this.components = new System.ComponentModel.Container();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxSuppliers = new MetroFramework.Controls.MetroComboBox();
-			this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButtonAddSupplier = new MetroFramework.Controls.MetroButton();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxEmployee = new MetroFramework.Controls.MetroComboBox();
-			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButton1 = new MetroFramework.Controls.MetroButton();
 			this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
-			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.CategoryID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.UnitID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.unitsInStoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroButton2 = new MetroFramework.Controls.MetroButton();
 			this.metroTextBoxQuantity = new MetroFramework.Controls.MetroTextBox();
-			this.invoiceUnitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxProduct = new MetroFramework.Controls.MetroComboBox();
 			this.metroButton3 = new MetroFramework.Controls.MetroButton();
 			this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-			this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
 			this.metroTileFinish = new MetroFramework.Controls.MetroTile();
-			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.unitsInStoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.invoiceUnitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -91,10 +90,6 @@
 			this.metroComboBoxSuppliers.Size = new System.Drawing.Size(232, 29);
 			this.metroComboBoxSuppliers.TabIndex = 2;
 			// 
-			// supplierBindingSource
-			// 
-			this.supplierBindingSource.DataSource = typeof(Manager.Supplier);
-			// 
 			// metroButtonAddSupplier
 			// 
 			this.metroButtonAddSupplier.Location = new System.Drawing.Point(394, 88);
@@ -111,10 +106,6 @@
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
 			this.dateTimePicker1.TabIndex = 4;
-			// 
-			// invoiceBindingSource
-			// 
-			this.invoiceBindingSource.DataSource = typeof(Manager.Invoice);
 			// 
 			// metroLabel2
 			// 
@@ -148,10 +139,6 @@
 			this.metroComboBoxEmployee.Size = new System.Drawing.Size(232, 29);
 			this.metroComboBoxEmployee.TabIndex = 2;
 			// 
-			// employeeBindingSource
-			// 
-			this.employeeBindingSource.DataSource = typeof(Manager.Employee);
-			// 
 			// metroButton1
 			// 
 			this.metroButton1.Location = new System.Drawing.Point(393, 123);
@@ -180,6 +167,108 @@
 			this.dataGridViewProducts.Size = new System.Drawing.Size(455, 194);
 			this.dataGridViewProducts.TabIndex = 5;
 			// 
+			// CategoryID
+			// 
+			this.CategoryID.DataPropertyName = "CategoryID";
+			this.CategoryID.DataSource = this.categoryBindingSource;
+			this.CategoryID.DisplayMember = "Name";
+			this.CategoryID.HeaderText = "Category";
+			this.CategoryID.Name = "CategoryID";
+			this.CategoryID.ReadOnly = true;
+			this.CategoryID.ValueMember = "CategoryID";
+			this.CategoryID.Width = 70;
+			// 
+			// UnitID
+			// 
+			this.UnitID.DataPropertyName = "UnitID";
+			this.UnitID.DataSource = this.unitBindingSource;
+			this.UnitID.DisplayMember = "Name";
+			this.UnitID.HeaderText = "Unit";
+			this.UnitID.Name = "UnitID";
+			this.UnitID.ReadOnly = true;
+			this.UnitID.ValueMember = "UnitID";
+			this.UnitID.Width = 60;
+			// 
+			// metroButton2
+			// 
+			this.metroButton2.Location = new System.Drawing.Point(24, 284);
+			this.metroButton2.Name = "metroButton2";
+			this.metroButton2.Size = new System.Drawing.Size(456, 28);
+			this.metroButton2.TabIndex = 3;
+			this.metroButton2.Text = "Add product to Invoice";
+			this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+			// 
+			// metroTextBoxQuantity
+			// 
+			this.metroTextBoxQuantity.Location = new System.Drawing.Point(194, 255);
+			this.metroTextBoxQuantity.Name = "metroTextBoxQuantity";
+			this.metroTextBoxQuantity.Size = new System.Drawing.Size(85, 23);
+			this.metroTextBoxQuantity.TabIndex = 6;
+			// 
+			// metroLabel4
+			// 
+			this.metroLabel4.AutoSize = true;
+			this.metroLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.metroLabel4.CustomBackground = true;
+			this.metroLabel4.Location = new System.Drawing.Point(24, 262);
+			this.metroLabel4.Name = "metroLabel4";
+			this.metroLabel4.Size = new System.Drawing.Size(61, 19);
+			this.metroLabel4.TabIndex = 1;
+			this.metroLabel4.Text = "Quantity:";
+			// 
+			// metroLabel5
+			// 
+			this.metroLabel5.AutoSize = true;
+			this.metroLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.metroLabel5.CustomBackground = true;
+			this.metroLabel5.Location = new System.Drawing.Point(24, 230);
+			this.metroLabel5.Name = "metroLabel5";
+			this.metroLabel5.Size = new System.Drawing.Size(137, 19);
+			this.metroLabel5.TabIndex = 1;
+			this.metroLabel5.Text = "Select an old product:";
+			// 
+			// metroComboBoxProduct
+			// 
+			this.metroComboBoxProduct.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "ProductID", true));
+			this.metroComboBoxProduct.FormattingEnabled = true;
+			this.metroComboBoxProduct.ItemHeight = 23;
+			this.metroComboBoxProduct.Location = new System.Drawing.Point(194, 220);
+			this.metroComboBoxProduct.Name = "metroComboBoxProduct";
+			this.metroComboBoxProduct.Size = new System.Drawing.Size(194, 29);
+			this.metroComboBoxProduct.TabIndex = 2;
+			// 
+			// metroButton3
+			// 
+			this.metroButton3.Location = new System.Drawing.Point(393, 220);
+			this.metroButton3.Name = "metroButton3";
+			this.metroButton3.Size = new System.Drawing.Size(85, 29);
+			this.metroButton3.TabIndex = 3;
+			this.metroButton3.Text = "Add Product";
+			this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+			// 
+			// metroLabel6
+			// 
+			this.metroLabel6.AutoSize = true;
+			this.metroLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+			this.metroLabel6.Location = new System.Drawing.Point(194, 174);
+			this.metroLabel6.Name = "metroLabel6";
+			this.metroLabel6.Size = new System.Drawing.Size(148, 25);
+			this.metroLabel6.TabIndex = 1;
+			this.metroLabel6.Text = "Product Selection:";
+			this.metroLabel6.UseStyleColors = true;
+			// 
+			// metroTileFinish
+			// 
+			this.metroTileFinish.ForeColor = System.Drawing.SystemColors.ControlLight;
+			this.metroTileFinish.Location = new System.Drawing.Point(24, 519);
+			this.metroTileFinish.Name = "metroTileFinish";
+			this.metroTileFinish.Size = new System.Drawing.Size(454, 41);
+			this.metroTileFinish.TabIndex = 7;
+			this.metroTileFinish.Text = "Finish Invoice";
+			this.metroTileFinish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.metroTileFinish.Click += new System.EventHandler(this.metroTileFinish_Click);
+			// 
 			// nameDataGridViewTextBoxColumn
 			// 
 			this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -203,31 +292,9 @@
 			this.tVADataGridViewTextBoxColumn.ReadOnly = true;
 			this.tVADataGridViewTextBoxColumn.Width = 40;
 			// 
-			// CategoryID
-			// 
-			this.CategoryID.DataPropertyName = "CategoryID";
-			this.CategoryID.DataSource = this.categoryBindingSource;
-			this.CategoryID.DisplayMember = "Name";
-			this.CategoryID.HeaderText = "Category";
-			this.CategoryID.Name = "CategoryID";
-			this.CategoryID.ReadOnly = true;
-			this.CategoryID.ValueMember = "CategoryID";
-			this.CategoryID.Width = 70;
-			// 
 			// categoryBindingSource
 			// 
 			this.categoryBindingSource.DataSource = typeof(Manager.Category);
-			// 
-			// UnitID
-			// 
-			this.UnitID.DataPropertyName = "UnitID";
-			this.UnitID.DataSource = this.unitBindingSource;
-			this.UnitID.DisplayMember = "Name";
-			this.UnitID.HeaderText = "Unit";
-			this.UnitID.Name = "UnitID";
-			this.UnitID.ReadOnly = true;
-			this.UnitID.ValueMember = "UnitID";
-			this.UnitID.Width = 60;
 			// 
 			// unitBindingSource
 			// 
@@ -245,100 +312,21 @@
 			// 
 			this.productBindingSource.DataSource = typeof(Manager.Product);
 			// 
-			// metroButton2
+			// invoiceBindingSource
 			// 
-			this.metroButton2.Location = new System.Drawing.Point(194, 289);
-			this.metroButton2.Name = "metroButton2";
-			this.metroButton2.Size = new System.Drawing.Size(286, 23);
-			this.metroButton2.TabIndex = 3;
-			this.metroButton2.Text = "Add product to Invoice";
-			this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+			this.invoiceBindingSource.DataSource = typeof(Manager.Invoice);
 			// 
-			// metroTextBoxQuantity
+			// employeeBindingSource
 			// 
-			this.metroTextBoxQuantity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceUnitBindingSource, "Quantity", true));
-			this.metroTextBoxQuantity.Location = new System.Drawing.Point(103, 289);
-			this.metroTextBoxQuantity.Name = "metroTextBoxQuantity";
-			this.metroTextBoxQuantity.Size = new System.Drawing.Size(85, 23);
-			this.metroTextBoxQuantity.TabIndex = 6;
+			this.employeeBindingSource.DataSource = typeof(Manager.Employee);
+			// 
+			// supplierBindingSource
+			// 
+			this.supplierBindingSource.DataSource = typeof(Manager.Supplier);
 			// 
 			// invoiceUnitBindingSource
 			// 
 			this.invoiceUnitBindingSource.DataSource = typeof(Manager.InvoiceUnit);
-			// 
-			// metroLabel4
-			// 
-			this.metroLabel4.AutoSize = true;
-			this.metroLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.metroLabel4.CustomBackground = true;
-			this.metroLabel4.Location = new System.Drawing.Point(24, 293);
-			this.metroLabel4.Name = "metroLabel4";
-			this.metroLabel4.Size = new System.Drawing.Size(61, 19);
-			this.metroLabel4.TabIndex = 1;
-			this.metroLabel4.Text = "Quantity:";
-			// 
-			// metroLabel5
-			// 
-			this.metroLabel5.AutoSize = true;
-			this.metroLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.metroLabel5.CustomBackground = true;
-			this.metroLabel5.Location = new System.Drawing.Point(24, 230);
-			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(137, 19);
-			this.metroLabel5.TabIndex = 1;
-			this.metroLabel5.Text = "Select an old product:";
-			// 
-			// metroComboBoxProduct
-			// 
-			this.metroComboBoxProduct.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "Name", true));
-			this.metroComboBoxProduct.FormattingEnabled = true;
-			this.metroComboBoxProduct.ItemHeight = 23;
-			this.metroComboBoxProduct.Location = new System.Drawing.Point(194, 220);
-			this.metroComboBoxProduct.Name = "metroComboBoxProduct";
-			this.metroComboBoxProduct.Size = new System.Drawing.Size(284, 29);
-			this.metroComboBoxProduct.TabIndex = 2;
-			// 
-			// metroButton3
-			// 
-			this.metroButton3.Location = new System.Drawing.Point(194, 255);
-			this.metroButton3.Name = "metroButton3";
-			this.metroButton3.Size = new System.Drawing.Size(284, 28);
-			this.metroButton3.TabIndex = 3;
-			this.metroButton3.Text = "Add a new Product";
-			this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
-			// 
-			// metroLabel6
-			// 
-			this.metroLabel6.AutoSize = true;
-			this.metroLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-			this.metroLabel6.Location = new System.Drawing.Point(194, 174);
-			this.metroLabel6.Name = "metroLabel6";
-			this.metroLabel6.Size = new System.Drawing.Size(148, 25);
-			this.metroLabel6.TabIndex = 1;
-			this.metroLabel6.Text = "Product Selection:";
-			this.metroLabel6.UseStyleColors = true;
-			// 
-			// metroLabel7
-			// 
-			this.metroLabel7.AutoSize = true;
-			this.metroLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.metroLabel7.CustomBackground = true;
-			this.metroLabel7.Location = new System.Drawing.Point(24, 264);
-			this.metroLabel7.Name = "metroLabel7";
-			this.metroLabel7.Size = new System.Drawing.Size(119, 19);
-			this.metroLabel7.TabIndex = 1;
-			this.metroLabel7.Text = "Or add a new one:";
-			// 
-			// metroTileFinish
-			// 
-			this.metroTileFinish.ForeColor = System.Drawing.SystemColors.ControlLight;
-			this.metroTileFinish.Location = new System.Drawing.Point(24, 519);
-			this.metroTileFinish.Name = "metroTileFinish";
-			this.metroTileFinish.Size = new System.Drawing.Size(454, 41);
-			this.metroTileFinish.TabIndex = 7;
-			this.metroTileFinish.Text = "Finish Invoice";
-			this.metroTileFinish.Click += new System.EventHandler(this.metroTileFinish_Click);
 			// 
 			// InvoiceDetails
 			// 
@@ -359,7 +347,6 @@
 			this.Controls.Add(this.metroComboBoxSuppliers);
 			this.Controls.Add(this.metroLabel4);
 			this.Controls.Add(this.metroLabel6);
-			this.Controls.Add(this.metroLabel7);
 			this.Controls.Add(this.metroLabel5);
 			this.Controls.Add(this.metroLabel3);
 			this.Controls.Add(this.metroLabel2);
@@ -367,13 +354,13 @@
 			this.Name = "InvoiceDetails";
 			this.Text = "Invoice";
 			this.Load += new System.EventHandler(this.InvoiceDetails_Load);
-			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.invoiceUnitBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -403,7 +390,6 @@
 		private MetroFramework.Controls.MetroComboBox metroComboBoxProduct;
 		private MetroFramework.Controls.MetroButton metroButton3;
 		private MetroFramework.Controls.MetroLabel metroLabel6;
-		private MetroFramework.Controls.MetroLabel metroLabel7;
 		private System.Windows.Forms.BindingSource invoiceUnitBindingSource;
 		private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn unitPriceDataGridViewTextBoxColumn;

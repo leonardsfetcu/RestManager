@@ -41,7 +41,11 @@
 			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.EmployeeID2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.metroTileAdd = new MetroFramework.Controls.MetroTile();
+			this.mtEmployeePanelSave = new MetroFramework.Controls.MetroTile();
+			this.mtEmployeePanelDelete = new MetroFramework.Controls.MetroTile();
+			this.mtEmployeePanelEdit = new MetroFramework.Controls.MetroTile();
+			this.mtEmployeePanelAdd = new MetroFramework.Controls.MetroTile();
+			this.mtEmployeePanelRefresh = new MetroFramework.Controls.MetroTile();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -157,16 +161,72 @@
 			// 
 			this.invoiceBindingSource.DataSource = typeof(Manager.Invoice);
 			// 
-			// metroTileAdd
+			// mtEmployeePanelSave
 			// 
-			this.metroTileAdd.Location = new System.Drawing.Point(24, 63);
-			this.metroTileAdd.Name = "metroTileAdd";
-			this.metroTileAdd.Size = new System.Drawing.Size(90, 78);
-			this.metroTileAdd.TabIndex = 2;
-			this.metroTileAdd.Text = "Create Invoice";
-			this.metroTileAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.metroTileAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-			this.metroTileAdd.Click += new System.EventHandler(this.metroTileAdd_Click);
+			this.mtEmployeePanelSave.Location = new System.Drawing.Point(408, 63);
+			this.mtEmployeePanelSave.Name = "mtEmployeePanelSave";
+			this.mtEmployeePanelSave.Size = new System.Drawing.Size(90, 78);
+			this.mtEmployeePanelSave.TabIndex = 2;
+			this.mtEmployeePanelSave.Text = "Save";
+			this.mtEmployeePanelSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.mtEmployeePanelSave.TileImage = global::Manager.Properties.Resources.rsz_user_23;
+			this.mtEmployeePanelSave.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.mtEmployeePanelSave.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.mtEmployeePanelSave.UseTileImage = true;
+			// 
+			// mtEmployeePanelDelete
+			// 
+			this.mtEmployeePanelDelete.Location = new System.Drawing.Point(312, 63);
+			this.mtEmployeePanelDelete.Name = "mtEmployeePanelDelete";
+			this.mtEmployeePanelDelete.Size = new System.Drawing.Size(90, 78);
+			this.mtEmployeePanelDelete.TabIndex = 3;
+			this.mtEmployeePanelDelete.Text = "Delete";
+			this.mtEmployeePanelDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.mtEmployeePanelDelete.TileImage = global::Manager.Properties.Resources.rsz_user_22;
+			this.mtEmployeePanelDelete.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.mtEmployeePanelDelete.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.mtEmployeePanelDelete.UseTileImage = true;
+			// 
+			// mtEmployeePanelEdit
+			// 
+			this.mtEmployeePanelEdit.Location = new System.Drawing.Point(216, 63);
+			this.mtEmployeePanelEdit.Name = "mtEmployeePanelEdit";
+			this.mtEmployeePanelEdit.Size = new System.Drawing.Size(90, 78);
+			this.mtEmployeePanelEdit.TabIndex = 4;
+			this.mtEmployeePanelEdit.Text = "Edit";
+			this.mtEmployeePanelEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.mtEmployeePanelEdit.TileImage = global::Manager.Properties.Resources.rsz_user_32;
+			this.mtEmployeePanelEdit.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.mtEmployeePanelEdit.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.mtEmployeePanelEdit.UseTileImage = true;
+			// 
+			// mtEmployeePanelAdd
+			// 
+			this.mtEmployeePanelAdd.Location = new System.Drawing.Point(120, 63);
+			this.mtEmployeePanelAdd.Name = "mtEmployeePanelAdd";
+			this.mtEmployeePanelAdd.Size = new System.Drawing.Size(90, 78);
+			this.mtEmployeePanelAdd.TabIndex = 5;
+			this.mtEmployeePanelAdd.Text = "Add";
+			this.mtEmployeePanelAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.mtEmployeePanelAdd.TileImage = global::Manager.Properties.Resources.rsz_user_20;
+			this.mtEmployeePanelAdd.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.mtEmployeePanelAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.mtEmployeePanelAdd.UseTileImage = true;
+			this.mtEmployeePanelAdd.Click += new System.EventHandler(this.metroTileAdd_Click);
+			// 
+			// mtEmployeePanelRefresh
+			// 
+			this.mtEmployeePanelRefresh.Location = new System.Drawing.Point(24, 63);
+			this.mtEmployeePanelRefresh.Name = "mtEmployeePanelRefresh";
+			this.mtEmployeePanelRefresh.Size = new System.Drawing.Size(90, 78);
+			this.mtEmployeePanelRefresh.TabIndex = 6;
+			this.mtEmployeePanelRefresh.Text = "Refresh";
+			this.mtEmployeePanelRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.mtEmployeePanelRefresh.TileImage = global::Manager.Properties.Resources.rsz_user_35;
+			this.mtEmployeePanelRefresh.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.mtEmployeePanelRefresh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.mtEmployeePanelRefresh.UseTileImage = true;
+			this.mtEmployeePanelRefresh.Click += new System.EventHandler(this.mtEmployeePanelRefresh_Click);
 			// 
 			// InvoicePanel
 			// 
@@ -174,7 +234,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
 			this.ClientSize = new System.Drawing.Size(841, 481);
-			this.Controls.Add(this.metroTileAdd);
+			this.Controls.Add(this.mtEmployeePanelSave);
+			this.Controls.Add(this.mtEmployeePanelDelete);
+			this.Controls.Add(this.mtEmployeePanelEdit);
+			this.Controls.Add(this.mtEmployeePanelAdd);
+			this.Controls.Add(this.mtEmployeePanelRefresh);
 			this.Controls.Add(this.dataGridView2);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "InvoicePanel";
@@ -203,10 +267,14 @@
 		private System.Windows.Forms.DataGridViewComboBoxColumn supplierIDDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
-		private MetroFramework.Controls.MetroTile metroTileAdd;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
 		private System.Windows.Forms.DataGridViewComboBoxColumn EmployeeID2;
+		private MetroFramework.Controls.MetroTile mtEmployeePanelSave;
+		private MetroFramework.Controls.MetroTile mtEmployeePanelDelete;
+		private MetroFramework.Controls.MetroTile mtEmployeePanelEdit;
+		private MetroFramework.Controls.MetroTile mtEmployeePanelAdd;
+		private MetroFramework.Controls.MetroTile mtEmployeePanelRefresh;
 	}
 }
