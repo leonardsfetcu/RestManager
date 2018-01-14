@@ -53,5 +53,12 @@ namespace Manager
 			Supplier s = supplierBindingSource.Current as Supplier;
 			if (s != null) dataGridView2.DataSource = context.Invoices.Where(a => a.SupplierID == s.SupplierID).ToList();
 		}
+
+		private void mtEmployeePanelRefresh_Click(object sender, EventArgs e)
+		{
+			supplierBindingSource.DataSource = context.Suppliers.ToList();
+			invoiceBindingSource.DataSource = context.Invoices.ToList();
+			employeeBindingSource.DataSource = context.Employees.ToList();
+		}
 	}
 }

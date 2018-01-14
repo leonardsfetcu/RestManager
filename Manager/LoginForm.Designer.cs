@@ -34,7 +34,6 @@
             this.mtPass = new MetroFramework.Controls.MetroTextBox();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -66,7 +65,7 @@
             // 
             this.mtPass.Location = new System.Drawing.Point(110, 89);
             this.mtPass.Name = "mtPass";
-            this.mtPass.PasswordChar = '■';
+            this.mtPass.PasswordChar = '•';
             this.mtPass.Size = new System.Drawing.Size(166, 23);
             this.mtPass.TabIndex = 2;
             this.mtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtPass_KeyDown);
@@ -89,23 +88,11 @@
             this.btnLogin.Text = "&Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(107, 153);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(45, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign Up";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 190);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(320, 175);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.mtPass);
@@ -114,7 +101,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "LoginForm";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
