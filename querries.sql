@@ -17,3 +17,22 @@ begin
 	print 'called'
 
 end
+
+
+-- procedura stocata la update pt Employee din login
+CREATE PROCEDURE updateEmployee (
+	@firstName nvarchar(50),
+	@lastName nvarchar(50),
+	@userName nvarchar(50),
+	@pass nvarchar(50)
+) AS
+BEGIN
+	UPDATE Employees
+	SET Employees.Username = @userName,
+		Employees.Password = @pass
+	where Employees.FirstName = @firstName AND Employees.LastName=@lastName
+END
+GO
+
+
+

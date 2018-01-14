@@ -104,6 +104,9 @@
     <Compile Include="InvoiceDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InvoiceUnit.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,17 +116,11 @@
     <Compile Include="InvoiceDetails.Designer.cs">
       <DependentUpon>InvoiceDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="InvoiceInfo.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="InvoicePanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InvoicePanel.Designer.cs">
       <DependentUpon>InvoicePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InvoiceUnit.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainPanel.cs">
       <SubType>Form</SubType>
@@ -180,6 +177,12 @@
     </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -257,6 +260,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>

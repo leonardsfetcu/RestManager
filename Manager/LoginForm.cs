@@ -55,10 +55,16 @@ namespace Manager
             }
         }
 
-		private void LoginForm_Shown(object sender, EventArgs e)
-		{
-			Activate();
-			Focus();
-		}
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm signUp = new SignUpForm();
+            signUp.ShowDialog();
+        }
+        
+        private void LoginForm_Shown(object sender, EventArgs e)
+        {
+          Activate();
+          Focus();
+        }
 	}
 }
