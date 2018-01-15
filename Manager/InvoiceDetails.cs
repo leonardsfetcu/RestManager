@@ -41,9 +41,9 @@ namespace Manager
 			using (RestaurantDBEntities context = new RestaurantDBEntities())
 			{
 				metroComboBoxSuppliers.DataSource = context.Suppliers.ToList();
-				
+
 				metroComboBoxProduct.DataSource = context.Products.ToList();
-				
+
 				categoryBindingSource.DataSource = context.Categories.ToList();
 				unitBindingSource.DataSource = context.Units.ToList();
 			}
@@ -51,7 +51,7 @@ namespace Manager
 			dataGridViewProducts.DataSource = productBindingSource;
 		}
 
-		
+
 		private void metroButton3_Click(object sender, EventArgs e)
 		{
 			using (ProductsDetails productDetails = new ProductsDetails(new Product() { ProductID = -1 }))
@@ -91,29 +91,42 @@ namespace Manager
 			productBindingSource.Add(CurrentProduct);
 		}
 
-		private async void metroTileFinish_Click(object sender, EventArgs e)
+		private void metroTileFinish_Click(object sender, EventArgs e)
 		{
-			using (RestaurantDBEntities context = new RestaurantDBEntities())
+			try
 			{
-				Invoice invoice = new Invoice();
-				InvoiceUnit invoiceUnit = new InvoiceUnit();
-				invoice.InvoiceID = -1;
-				invoice.SupplierID = (int)metroComboBoxSuppliers.SelectedValue;
-				invoice.Date = dateTimePicker1.Value;
-				invoice.EmployeeID = LoginForm.User.EmployeeID;
-
-				context.Invoices.Add(invoice);
-				context.SaveChanges();
-
-				invoiceUnit.InvoiceUnitID = -1;
-				invoiceUnit.InvoiceID = invoice.InvoiceID; ;
-				foreach (Product prod in productBindingSource.List)
+				using (RestaurantDBEntities context = new RestaurantDBEntities())
 				{
-					invoiceUnit.ProductID = prod.ProductID;
-					invoiceUnit.Quantity = (int)prod.UnitsInStore;
-					context.InvoiceUnits.Add(invoiceUnit);
+					Invoice invoice = new Invoice();
+					InvoiceUnit invoiceUnit = new InvoiceUnit();
+					invoice.InvoiceID = -1;
+					invoice.SupplierID = (int)metroComboBoxSuppliers.SelectedValue;
+					invoice.Date = dateTimePicker1.Value;
+					invoice.EmployeeID = LoginForm.User.EmployeeID;
+					// begin transaction
+					using (var transaction = context.Database.BeginTransaction())
+					{
+						// add the invoice row to obtain an InvoiceID
+						context.Invoices.Add(invoice);
+						context.SaveChanges();
+
+						invoiceUnit.InvoiceUnitID = -1;
+						invoiceUnit.InvoiceID = invoice.InvoiceID; ;
+						foreach (Product prod in productBindingSource.List)
+						{
+							invoiceUnit.ProductID = prod.ProductID;
+							invoiceUnit.Quantity = (int)prod.UnitsInStore;
+							context.InvoiceUnits.Add(invoiceUnit);
+						}
+						// insert in the other table;
+						context.SaveChanges();
+						transaction.Commit();
+					}
 				}
-				await context.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			if (MessageBox.Show("Generate PDF Invoice?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
 			{
@@ -138,9 +151,9 @@ namespace Manager
 				Document document = new Document(PageSize.A4, 10, 10, 120, 10);
 				PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
 				document.Open();
-					// title
+				// title
 				document.AddTitle("Invoice");
-					// subtitle
+				// subtitle
 				BaseFont baseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false);
 				iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 16.0f, 3);
 				document.Add(new Paragraph("               INVOICE", font));
@@ -152,7 +165,7 @@ namespace Manager
 				document.Add(new Paragraph("                     CIF: " + supl.CIF, font));
 				document.Add(new Paragraph("                     Adress: " + supl.Adress, font));
 				document.Add(new Paragraph("                      ", font));
-					// table
+				// table
 				PdfPTable table = new PdfPTable(4);
 				table.TotalWidth = document.PageSize.Width;
 				PdfPCell cell = new PdfPCell();
@@ -193,20 +206,20 @@ namespace Manager
 				cell.Phrase = new Phrase(total.ToString(), font);
 				table.AddCell(cell);
 
-				document.Add(table);	
+				document.Add(table);
 
 				font = new iTextSharp.text.Font(baseFont, 14.0f, 3);
 				Paragraph p = new Paragraph(" ", font);
 				p.Alignment = Element.ALIGN_RIGHT;
 				document.Add(p);
 				document.Add(p);
-				
+
 				p = new Paragraph("Signature: " + empl.FirstName + " " + empl.LastName + "                 ", font);
 				p.Alignment = Element.ALIGN_RIGHT;
 				document.Add(p);
 
 				document.Close();
-				
+
 				System.Diagnostics.Process.Start(path);
 			}
 		}

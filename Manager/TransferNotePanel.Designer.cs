@@ -68,7 +68,7 @@
 			this.mtEmployeePanelAdd.TabIndex = 12;
 			this.mtEmployeePanelAdd.Text = "Add";
 			this.mtEmployeePanelAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.mtEmployeePanelAdd.TileImage = global::Manager.Properties.Resources.rsz_user_20;
+			this.mtEmployeePanelAdd.TileImage = ((System.Drawing.Image)(resources.GetObject("mtEmployeePanelAdd.TileImage")));
 			this.mtEmployeePanelAdd.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
 			this.mtEmployeePanelAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
 			this.mtEmployeePanelAdd.UseTileImage = true;
@@ -83,7 +83,7 @@
 			this.mtEmployeePanelRefresh.TabIndex = 13;
 			this.mtEmployeePanelRefresh.Text = "Refresh";
 			this.mtEmployeePanelRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.mtEmployeePanelRefresh.TileImage = global::Manager.Properties.Resources.rsz_user_35;
+			this.mtEmployeePanelRefresh.TileImage = ((System.Drawing.Image)(resources.GetObject("mtEmployeePanelRefresh.TileImage")));
 			this.mtEmployeePanelRefresh.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
 			this.mtEmployeePanelRefresh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
 			this.mtEmployeePanelRefresh.UseTileImage = true;

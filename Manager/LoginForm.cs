@@ -10,59 +10,67 @@ using System.Windows.Forms;
 
 namespace Manager
 {
-	public enum PrivilegeLevel {
+	public enum PrivilegeLevel
+	{
 		admin, secretar, worker
 	}
-    public partial class LoginForm : MetroFramework.Forms.MetroForm
-    {
-        public static Employee User { get; set; }
+	public partial class LoginForm : MetroFramework.Forms.MetroForm
+	{
+		public static Employee User { get; set; }
 		public static LoginForm Control { get; set; }
-        public LoginForm()
-        {
-            InitializeComponent();
+		public LoginForm()
+		{
+			InitializeComponent();
 			Control = this;
-        }
+		}
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
 			DialogResult = DialogResult.Cancel;
 			Application.Exit();
-        }
+		}
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            using (RestaurantDBEntities context = new RestaurantDBEntities())
-            {
-                List<Employee> list = context.Employees.Where(x => x.Username == mtUser.Text).ToList();
-                foreach (Employee user in list)
-                {
-                    if(user.Password == mtPass.Text)
-                    {
-                        User = user;
-                        MainPanel mainPanel = new MainPanel();
-                        this.Hide();
-                        mainPanel.ShowDialog();
-                        //this.Close();
-                        return;
-                    }
-                }
-                MessageBox.Show("User name or password incorrect!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+		private void btnLogin_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				using (RestaurantDBEntities context = new RestaurantDBEntities())
+				{
+					List<Employee> list = context.Employees.Where(x => x.Username == mtUser.Text).ToList();
+					foreach (Employee user in list)
+					{
+						if (user.Password == mtPass.Text)
+						{
+							User = user;
+							MainPanel mainPanel = new MainPanel();
+							this.Hide();
+							mainPanel.ShowDialog();
+							//this.Close();
+							return;
+						}
+					}
+					MessageBox.Show("User name or password incorrect!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
-        private void mtPass_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin_Click(sender, e);
-            }
-        }
+		private void mtPass_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnLogin_Click(sender, e);
+			}
+		}
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
 			SignUpForm signUp = new SignUpForm();
 			signUp.ShowDialog();
-        }
+		}
 
 		private void LoginForm_Shown(object sender, EventArgs e)
 		{
@@ -75,7 +83,7 @@ namespace Manager
 			mtUser.Text = string.Empty;
 			mtPass.Text = string.Empty;
 		}
-		
+
 		public static bool RequireAccesLevel(PrivilegeLevel level)
 		{
 			if (level == PrivilegeLevel.admin)
