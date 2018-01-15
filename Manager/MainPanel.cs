@@ -29,7 +29,7 @@ namespace Manager
 
         private void MainPanel_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 		private void metroTile1_Click(object sender, EventArgs e)
@@ -61,6 +61,14 @@ namespace Manager
             using (MenuPanel menuPanel = new MenuPanel())
             {
                menuPanel.ShowDialog();
+            }
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            using (TransferNotePanel transferPanel = new TransferNotePanel())
+            {
+                transferPanel.ShowDialog();
             }
         }
     }

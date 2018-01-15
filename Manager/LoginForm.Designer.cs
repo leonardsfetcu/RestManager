@@ -28,96 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-			this.mtUser = new MetroFramework.Controls.MetroTextBox();
-			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-			this.mtPass = new MetroFramework.Controls.MetroTextBox();
-			this.btnCancel = new MetroFramework.Controls.MetroButton();
-			this.btnLogin = new MetroFramework.Controls.MetroButton();
-			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-			this.SuspendLayout();
-			// 
-			// metroLabel1
-			// 
-			this.metroLabel1.AutoSize = true;
-			this.metroLabel1.Location = new System.Drawing.Point(23, 60);
-			this.metroLabel1.Name = "metroLabel1";
-			this.metroLabel1.Size = new System.Drawing.Size(35, 19);
-			this.metroLabel1.TabIndex = 0;
-			this.metroLabel1.Text = "User";
-			// 
-			// mtUser
-			// 
-			this.mtUser.Location = new System.Drawing.Point(110, 60);
-			this.mtUser.Name = "mtUser";
-			this.mtUser.Size = new System.Drawing.Size(166, 23);
-			this.mtUser.TabIndex = 1;
-			// 
-			// metroLabel2
-			// 
-			this.metroLabel2.AutoSize = true;
-			this.metroLabel2.Location = new System.Drawing.Point(23, 89);
-			this.metroLabel2.Name = "metroLabel2";
-			this.metroLabel2.Size = new System.Drawing.Size(63, 19);
-			this.metroLabel2.TabIndex = 0;
-			this.metroLabel2.Text = "Password";
-			// 
-			// mtPass
-			// 
-			this.mtPass.Location = new System.Drawing.Point(110, 89);
-			this.mtPass.Name = "mtPass";
-			this.mtPass.PasswordChar = '•';
-			this.mtPass.Size = new System.Drawing.Size(166, 23);
-			this.mtPass.TabIndex = 2;
-			this.mtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtPass_KeyDown);
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Location = new System.Drawing.Point(201, 118);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(75, 23);
-			this.btnCancel.TabIndex = 4;
-			this.btnCancel.Text = "&Cancel";
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-			// 
-			// btnLogin
-			// 
-			this.btnLogin.Location = new System.Drawing.Point(110, 118);
-			this.btnLogin.Name = "btnLogin";
-			this.btnLogin.Size = new System.Drawing.Size(75, 23);
-			this.btnLogin.TabIndex = 3;
-			this.btnLogin.Text = "&Login";
-			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-			// 
-			// linkLabel2
-			// 
-			this.linkLabel2.AutoSize = true;
-			this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.linkLabel2.Location = new System.Drawing.Point(110, 148);
-			this.linkLabel2.Name = "linkLabel2";
-			this.linkLabel2.Size = new System.Drawing.Size(56, 16);
-			this.linkLabel2.TabIndex = 5;
-			this.linkLabel2.TabStop = true;
-			this.linkLabel2.Text = "Sign Up";
-			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-			// 
-			// LoginForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(320, 184);
-			this.Controls.Add(this.linkLabel2);
-			this.Controls.Add(this.btnLogin);
-			this.Controls.Add(this.btnCancel);
-			this.Controls.Add(this.mtPass);
-			this.Controls.Add(this.metroLabel2);
-			this.Controls.Add(this.mtUser);
-			this.Controls.Add(this.metroLabel1);
-			this.Name = "LoginForm";
-			this.Text = "Login";
-			this.Shown += new System.EventHandler(this.LoginForm_Shown);
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.mtUser = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.mtPass = new MetroFramework.Controls.MetroTextBox();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.SuspendLayout();
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(31, 74);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(38, 20);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "User";
+            // 
+            // mtUser
+            // 
+            this.mtUser.Location = new System.Drawing.Point(147, 74);
+            this.mtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtUser.Name = "mtUser";
+            this.mtUser.Size = new System.Drawing.Size(221, 28);
+            this.mtUser.TabIndex = 1;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(31, 110);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(66, 20);
+            this.metroLabel2.TabIndex = 0;
+            this.metroLabel2.Text = "Password";
+            // 
+            // mtPass
+            // 
+            this.mtPass.Location = new System.Drawing.Point(147, 110);
+            this.mtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtPass.Name = "mtPass";
+            this.mtPass.PasswordChar = '•';
+            this.mtPass.Size = new System.Drawing.Size(221, 28);
+            this.mtPass.TabIndex = 2;
+            this.mtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtPass_KeyDown);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(268, 145);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(147, 145);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(100, 28);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "&Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.linkLabel2.Location = new System.Drawing.Point(147, 182);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(68, 20);
+            this.linkLabel2.TabIndex = 5;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Sign Up";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // LoginForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(427, 226);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.mtPass);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.mtUser);
+            this.Controls.Add(this.metroLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "LoginForm";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Shown += new System.EventHandler(this.LoginForm_Shown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

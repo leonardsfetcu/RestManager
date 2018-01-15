@@ -60,5 +60,10 @@ namespace Manager
 			invoiceBindingSource.DataSource = context.Invoices.ToList();
 			employeeBindingSource.DataSource = context.Employees.ToList();
 		}
-	}
+
+        private void mtEmployeePanelEdit_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
+    }
 }

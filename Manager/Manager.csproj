@@ -104,9 +104,6 @@
     <Compile Include="InvoiceDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InvoiceInfo.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="InvoiceUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
@@ -187,12 +184,6 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
@@ -213,6 +204,18 @@
     </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNoteUnitPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNoteUnitPanel.Designer.cs">
+      <DependentUpon>TransferNoteUnitPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNotePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNotePanel.Designer.cs">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="TransfetNoteUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -272,6 +275,12 @@
     <EmbeddedResource Include="SupplierPanel.resx">
       <DependentUpon>SupplierPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransferNoteUnitPanel.resx">
+      <DependentUpon>TransferNoteUnitPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferNotePanel.resx">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
@@ -281,6 +290,8 @@
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Role.datasource" />
     <None Include="Properties\DataSources\Supplier.datasource" />
+    <None Include="Properties\DataSources\TransferNote1.datasource" />
+    <None Include="Properties\DataSources\TransfetNoteUnit1.datasource" />
     <None Include="Properties\DataSources\Type.datasource" />
     <None Include="Properties\DataSources\Unit.datasource" />
     <None Include="Properties\Settings.settings">

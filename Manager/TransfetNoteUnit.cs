@@ -14,6 +14,7 @@ namespace Manager
     
     public partial class TransfetNoteUnit
     {
+        public int TransferNoteUnitID { get; set; }
         public int TransferNoteID { get; set; }
         public int ProductID { get; set; }
         public int Quantity { get; set; }
