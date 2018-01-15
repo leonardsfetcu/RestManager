@@ -20,6 +20,9 @@ de a obtine diverse informatii sub forma de rapoarte din baza de date gestionata
 
 ## III. Implementare
 
-#### 1. Baza de date
+#### 1. Diagrama bazei de date
 
 ![diagrama](https://github.com/leonardsfetcu/RestManager/blob/tnote/DB_Diagram.PNG)
+
+
+
