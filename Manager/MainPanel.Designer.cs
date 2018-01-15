@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
 			this.metroTile3 = new MetroFramework.Controls.MetroTile();
 			this.mt = new MetroFramework.Controls.MetroTile();
@@ -38,6 +37,7 @@
 			this.metroInvoices = new MetroFramework.Controls.MetroTile();
 			this.metroTile2 = new MetroFramework.Controls.MetroTile();
 			this.metroTile4 = new MetroFramework.Controls.MetroTile();
+			this.metroTile5 = new MetroFramework.Controls.MetroTile();
 			this.SuspendLayout();
 			// 
 			// metroTile3
@@ -140,7 +140,7 @@
 			// 
 			// metroTile4
 			// 
-			this.metroTile4.Location = new System.Drawing.Point(604, 347);
+			this.metroTile4.Location = new System.Drawing.Point(697, 347);
 			this.metroTile4.Name = "metroTile4";
 			this.metroTile4.Size = new System.Drawing.Size(90, 78);
 			this.metroTile4.TabIndex = 0;
@@ -152,15 +152,30 @@
 			this.metroTile4.UseTileImage = true;
 			this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click_1);
 			// 
+			// metroTile5
+			// 
+			this.metroTile5.Location = new System.Drawing.Point(697, 93);
+			this.metroTile5.Name = "metroTile5";
+			this.metroTile5.Size = new System.Drawing.Size(90, 78);
+			this.metroTile5.TabIndex = 0;
+			this.metroTile5.Text = "Transfer";
+			this.metroTile5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.metroTile5.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile5.TileImage")));
+			this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+			this.metroTile5.UseTileImage = true;
+			this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
+			// 
 			// MainPanel
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-			this.ClientSize = new System.Drawing.Size(717, 448);
+			this.ClientSize = new System.Drawing.Size(810, 448);
 			this.Controls.Add(this.metroTileProducts);
 			this.Controls.Add(this.metroTile1);
 			this.Controls.Add(this.metroTile2);
+			this.Controls.Add(this.metroTile5);
 			this.Controls.Add(this.metroInvoices);
 			this.Controls.Add(this.metroTile3);
 			this.Controls.Add(this.mt);
@@ -185,6 +200,7 @@
 		private MetroFramework.Controls.MetroTile metroInvoices;
 		private MetroFramework.Controls.MetroTile metroTile2;
 		private MetroFramework.Controls.MetroTile metroTile4;
+		private MetroFramework.Controls.MetroTile metroTile5;
 	}
 }
 
