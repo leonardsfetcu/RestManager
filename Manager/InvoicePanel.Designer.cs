@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoicePanel));
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -78,10 +79,12 @@
 			this.dataGridView2.AutoGenerateColumns = false;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.EmployeeID2});
+
 			this.dataGridView2.DataSource = this.invoiceBindingSource;
 			this.dataGridView2.Location = new System.Drawing.Point(374, 157);
 			this.dataGridView2.Name = "dataGridView2";
@@ -222,7 +225,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
 			this.metroTile3 = new MetroFramework.Controls.MetroTile();
 			this.mt = new MetroFramework.Controls.MetroTile();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.mtUser = new MetroFramework.Controls.MetroTextBox();
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();

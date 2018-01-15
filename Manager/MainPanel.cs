@@ -28,7 +28,7 @@ namespace Manager
 
         private void MainPanel_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 		private void metroTile1_Click(object sender, EventArgs e)
