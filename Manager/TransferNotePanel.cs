@@ -16,7 +16,6 @@ namespace Manager
         public TransferNotePanel()
         {
             InitializeComponent();
-            
         }
 
         private void TransferNotePanel_Load(object sender, EventArgs e)

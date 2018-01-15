@@ -61,9 +61,9 @@ namespace Manager
 			employeeBindingSource.DataSource = context.Employees.ToList();
 		}
 
-        private void mtEmployeePanelEdit_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-        }
-    }
+		private void mtEmployeePanelSave_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+	}
 }

@@ -17,10 +17,9 @@ namespace Manager
             InitializeComponent();
         }
 
-       
-
         private void mtEmployees_Click(object sender, EventArgs e)
         {
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.admin))
             using (EmployeePanel employeePanel = new EmployeePanel())
             {
                 employeePanel.ShowDialog();
@@ -34,7 +33,8 @@ namespace Manager
 
 		private void metroTile1_Click(object sender, EventArgs e)
 		{
-			using (SupplierPanel supplierPanel = new SupplierPanel())
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.secretar))
+				using (SupplierPanel supplierPanel = new SupplierPanel())
 			{
 				supplierPanel.ShowDialog();
 			}
@@ -42,7 +42,8 @@ namespace Manager
 
 		private void metroTileProducts_Click(object sender, EventArgs e)
 		{
-			using (ProductsPanel productsPanel = new ProductsPanel())
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.secretar))
+				using (ProductsPanel productsPanel = new ProductsPanel())
 			{
 				productsPanel.ShowDialog();
 			}
@@ -50,26 +51,57 @@ namespace Manager
 
 		private void metroInvoices_Click(object sender, EventArgs e)
 		{
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.secretar))
 			using (InvoicePanel invoicePanel = new InvoicePanel())
 			{
 				invoicePanel.ShowDialog();
 			}
 		}
 
-        private void metroTile4_Click(object sender, EventArgs e)//Menu
-        {
-            using (MenuPanel menuPanel = new MenuPanel())
+        private void metroTile4_Click(object sender, EventArgs e)
+		{
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.worker))
+				using (MenuPanel menuPanel = new MenuPanel())
             {
                menuPanel.ShowDialog();
             }
         }
 
-        private void metroTile3_Click(object sender, EventArgs e)
-        {
-            using (TransferNotePanel transferPanel = new TransferNotePanel())
-            {
-                transferPanel.ShowDialog();
-            }
-        }
-    }
+		private void metroTile4_Click_1(object sender, EventArgs e)
+		{
+			LoginForm.Control.Show();
+			LoginForm.Control.ClearTextBoxes();
+			Close();
+		}
+
+		private void mt_Click(object sender, EventArgs e)
+		{
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.worker))
+			{
+				using (Store storePanel = new Store())
+				{
+					storePanel.ShowDialog();
+				}
+			}
+		}
+
+		private void metroTile3_Click(object sender, EventArgs e)
+		{
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.worker))
+			{
+				using (Kitchen kitchenPanel = new Kitchen())
+				{
+					kitchenPanel.ShowDialog();
+				}
+			}
+		}
+
+		private void MainPanel_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (!LoginForm.Control.Visible)
+			{
+				Application.Exit();
+			}
+		}
+	}
 }

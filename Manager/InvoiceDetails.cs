@@ -34,8 +34,6 @@ namespace Manager
 		{
 			metroComboBoxSuppliers.DisplayMember = "Name";
 			metroComboBoxSuppliers.ValueMember = "SupplierID";
-			metroComboBoxEmployee.DisplayMember = "FirstName";
-			metroComboBoxEmployee.ValueMember = "EmployeeID";
 			metroComboBoxProduct.DisplayMember = "Name";
 			metroComboBoxProduct.ValueMember = "ProductID";
 
@@ -43,9 +41,7 @@ namespace Manager
 			using (RestaurantDBEntities context = new RestaurantDBEntities())
 			{
 				metroComboBoxSuppliers.DataSource = context.Suppliers.ToList();
-
-
-				metroComboBoxEmployee.DataSource = context.Employees.ToList();
+				
 				metroComboBoxProduct.DataSource = context.Products.ToList();
 				
 				categoryBindingSource.DataSource = context.Categories.ToList();
@@ -55,34 +51,7 @@ namespace Manager
 			dataGridViewProducts.DataSource = productBindingSource;
 		}
 
-		private async void metroButtonAddSupplier_Click(object sender, EventArgs e)
-		{
-			using (SupplierDetails supplierDetails = new SupplierDetails(new Supplier() { SupplierID = -1 }))
-			{
-				if (supplierDetails.ShowDialog() == DialogResult.OK)
-				{
-					using (RestaurantDBEntities context = new RestaurantDBEntities())
-					{
-						try
-						{
-							supplierBindingSource.Add(supplierDetails.SupplierInfo);
-							context.Suppliers.Add(supplierDetails.SupplierInfo);
-							await context.SaveChangesAsync();
-						}
-						catch (Exception ex)
-						{
-							MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-						}
-					}
-				}
-			}
-			using (RestaurantDBEntities context = new RestaurantDBEntities())
-			{
-				metroComboBoxSuppliers.DataSource = context.Suppliers.ToList();
-			}
-		}
-
-
+		
 		private void metroButton3_Click(object sender, EventArgs e)
 		{
 			using (ProductsDetails productDetails = new ProductsDetails(new Product() { ProductID = -1 }))
@@ -131,7 +100,7 @@ namespace Manager
 				invoice.InvoiceID = -1;
 				invoice.SupplierID = (int)metroComboBoxSuppliers.SelectedValue;
 				invoice.Date = dateTimePicker1.Value;
-				invoice.EmployeeID = (int)metroComboBoxEmployee.SelectedValue;
+				invoice.EmployeeID = LoginForm.User.EmployeeID;
 
 				context.Invoices.Add(invoice);
 				context.SaveChanges();
@@ -162,7 +131,7 @@ namespace Manager
 				Supplier supl;
 				using (RestaurantDBEntities context = new RestaurantDBEntities())
 				{
-					empl = context.Employees.Find(metroComboBoxEmployee.SelectedValue);
+					empl = LoginForm.User;
 					supl = context.Suppliers.Find(metroComboBoxSuppliers.SelectedValue);
 				}
 

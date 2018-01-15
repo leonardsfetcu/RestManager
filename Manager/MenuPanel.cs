@@ -120,5 +120,10 @@ namespace Manager
             typeBindingSource.DataSource = context.Types.ToList();
             //roleBindingSource.DataSource = context.Roles.ToList();
         }
-    }
+
+		private void mtEmployeePanelSave_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+	}
 }

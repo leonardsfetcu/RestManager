@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+
             this.mtEmployeePanelEdit = new MetroFramework.Controls.MetroTile();
             this.mtEmployeePanelAdd = new MetroFramework.Controls.MetroTile();
             this.mtEmployeePanelRefresh = new MetroFramework.Controls.MetroTile();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+
             this.TransferNoteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transferNoteUnitIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.transferNoteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,16 +64,19 @@
             // mtEmployeePanelEdit
             // 
             this.mtEmployeePanelEdit.Location = new System.Drawing.Point(530, 119);
+
             this.mtEmployeePanelEdit.Margin = new System.Windows.Forms.Padding(4);
             this.mtEmployeePanelEdit.Name = "mtEmployeePanelEdit";
             this.mtEmployeePanelEdit.Size = new System.Drawing.Size(120, 96);
             this.mtEmployeePanelEdit.TabIndex = 11;
+
             this.mtEmployeePanelEdit.Text = "Exit";
             this.mtEmployeePanelEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.mtEmployeePanelEdit.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mtEmployeePanelEdit.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtEmployeePanelEdit.UseTileImage = true;
             this.mtEmployeePanelEdit.Click += new System.EventHandler(this.mtEmployeePanelEdit_Click);
+
             // 
             // mtEmployeePanelAdd
             // 
@@ -85,7 +91,9 @@
             this.mtEmployeePanelAdd.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mtEmployeePanelAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtEmployeePanelAdd.UseTileImage = true;
+
             this.mtEmployeePanelAdd.Click += new System.EventHandler(this.mtEmployeePanelAdd_Click);
+
             // 
             // mtEmployeePanelRefresh
             // 
@@ -100,7 +108,9 @@
             this.mtEmployeePanelRefresh.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mtEmployeePanelRefresh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtEmployeePanelRefresh.UseTileImage = true;
+
             this.mtEmployeePanelRefresh.Click += new System.EventHandler(this.mtEmployeePanelRefresh_Click);
+
             // 
             // dataGridView2
             // 
@@ -109,16 +119,19 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+
             this.TransferNoteID,
             this.ProductID,
             this.Quantity,
             this.transferNoteUnitIDDataGridViewTextBoxColumn,
+
             this.transferNoteIDDataGridViewTextBoxColumn,
             this.productIDDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.productDataGridViewTextBoxColumn,
             this.transferNoteDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.transfetNoteUnitBindingSource;
+
             this.dataGridView2.Location = new System.Drawing.Point(343, 234);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
@@ -163,6 +176,7 @@
             this.transferNoteUnitIDDataGridViewTextBoxColumn.HeaderText = "TransferNoteUnitID";
             this.transferNoteUnitIDDataGridViewTextBoxColumn.Name = "transferNoteUnitIDDataGridViewTextBoxColumn";
             this.transferNoteUnitIDDataGridViewTextBoxColumn.ReadOnly = true;
+
             // 
             // transferNoteIDDataGridViewTextBoxColumn
             // 
@@ -278,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferNoteBindingSource)).EndInit();
+
             this.ResumeLayout(false);
 
         }
@@ -299,6 +314,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn transferNoteUnitIDDataGridViewTextBoxColumn;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn transferNoteIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
