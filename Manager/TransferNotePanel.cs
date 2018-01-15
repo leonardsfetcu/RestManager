@@ -107,5 +107,10 @@ namespace Manager
                 transferNoteBindingSource.DataSource = context.TransferNotes.ToList();
             }
         }
-    }
+
+		private void mtEmployeePanelSave_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+	}
 }

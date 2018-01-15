@@ -258,6 +258,7 @@
 			this.mtEmployeePanelSave.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
 			this.mtEmployeePanelSave.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
 			this.mtEmployeePanelSave.UseTileImage = true;
+			this.mtEmployeePanelSave.Click += new System.EventHandler(this.mtEmployeePanelSave_Click);
 			// 
 			// TransferNotePanel
 			// 
