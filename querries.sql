@@ -34,5 +34,15 @@ BEGIN
 END
 GO
 
+-- creza view pentru afisarea in depozit
+CREATE VIEW StoreView AS
+
+SELECT        Products.Name,Products.UnitsInStore as Quatity, Products.UnitPrice, Products.TVA, Categories.Name as Category
+FROM            Products INNER JOIN
+                         Units ON Products.UnitID = Units.UnitID INNER JOIN
+                         Categories ON Products.CategoryID = Categories.CategoryID
+GO
+
+
 
 

@@ -110,6 +110,15 @@
     <Compile Include="InvoiceUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="KitchenPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitchenPanel.Designer.cs">
+      <DependentUpon>KitchenPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenView.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,14 +202,20 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StorePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StorePanel.Designer.cs">
+      <DependentUpon>StorePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreView.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierDetails.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransferNote.cs">
-      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierDetails.Designer.cs">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
@@ -213,6 +228,21 @@
     </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNote.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNoteDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNoteDetails.Designer.cs">
+      <DependentUpon>TransferNoteDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNotePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNotePanel.Designer.cs">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="TransfetNoteUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -228,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeePanel.resx">
       <DependentUpon>EmployeePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitchenPanel.resx">
+      <DependentUpon>KitchenPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -266,21 +299,33 @@
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StorePanel.resx">
+      <DependentUpon>StorePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierPanel.resx">
       <DependentUpon>SupplierPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransferNoteDetails.resx">
+      <DependentUpon>TransferNoteDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferNotePanel.resx">
+      <DependentUpon>TransferNotePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Invoice.datasource" />
     <None Include="Properties\DataSources\InvoiceUnit.datasource" />
+    <None Include="Properties\DataSources\KitchenView.datasource" />
     <None Include="Properties\DataSources\Menu.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Role.datasource" />
+    <None Include="Properties\DataSources\StoreView.datasource" />
     <None Include="Properties\DataSources\Supplier.datasource" />
+    <None Include="Properties\DataSources\TransfetNoteUnit1.datasource" />
     <None Include="Properties\DataSources\Type.datasource" />
     <None Include="Properties\DataSources\Unit.datasource" />
     <None Include="Properties\Settings.settings">

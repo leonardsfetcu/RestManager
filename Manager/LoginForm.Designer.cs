@@ -43,7 +43,7 @@
 			this.metroLabel1.Location = new System.Drawing.Point(23, 60);
 			this.metroLabel1.Name = "metroLabel1";
 			this.metroLabel1.Size = new System.Drawing.Size(35, 19);
-			this.metroLabel1.TabIndex = 0;
+			this.metroLabel1.TabIndex = 6;
 			this.metroLabel1.Text = "User";
 			// 
 			// mtUser
@@ -51,7 +51,7 @@
 			this.mtUser.Location = new System.Drawing.Point(110, 60);
 			this.mtUser.Name = "mtUser";
 			this.mtUser.Size = new System.Drawing.Size(166, 23);
-			this.mtUser.TabIndex = 1;
+			this.mtUser.TabIndex = 0;
 			// 
 			// metroLabel2
 			// 
@@ -59,7 +59,7 @@
 			this.metroLabel2.Location = new System.Drawing.Point(23, 89);
 			this.metroLabel2.Name = "metroLabel2";
 			this.metroLabel2.Size = new System.Drawing.Size(63, 19);
-			this.metroLabel2.TabIndex = 0;
+			this.metroLabel2.TabIndex = 5;
 			this.metroLabel2.Text = "Password";
 			// 
 			// mtPass
@@ -68,7 +68,7 @@
 			this.mtPass.Name = "mtPass";
 			this.mtPass.PasswordChar = '•';
 			this.mtPass.Size = new System.Drawing.Size(166, 23);
-			this.mtPass.TabIndex = 2;
+			this.mtPass.TabIndex = 1;
 			this.mtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtPass_KeyDown);
 			// 
 			// btnCancel
@@ -76,7 +76,7 @@
 			this.btnCancel.Location = new System.Drawing.Point(201, 118);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
-			this.btnCancel.TabIndex = 4;
+			this.btnCancel.TabIndex = 3;
 			this.btnCancel.Text = "&Cancel";
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
@@ -85,7 +85,7 @@
 			this.btnLogin.Location = new System.Drawing.Point(110, 118);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(75, 23);
-			this.btnLogin.TabIndex = 3;
+			this.btnLogin.TabIndex = 2;
 			this.btnLogin.Text = "&Login";
 			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
@@ -96,7 +96,7 @@
 			this.linkLabel2.Location = new System.Drawing.Point(110, 148);
 			this.linkLabel2.Name = "linkLabel2";
 			this.linkLabel2.Size = new System.Drawing.Size(56, 16);
-			this.linkLabel2.TabIndex = 5;
+			this.linkLabel2.TabIndex = 4;
 			this.linkLabel2.TabStop = true;
 			this.linkLabel2.Text = "Sign Up";
 			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

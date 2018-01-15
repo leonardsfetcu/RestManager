@@ -31,12 +31,8 @@
 			this.components = new System.ComponentModel.Container();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBoxSuppliers = new MetroFramework.Controls.MetroComboBox();
-			this.metroButtonAddSupplier = new MetroFramework.Controls.MetroButton();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-			this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-			this.metroComboBoxEmployee = new MetroFramework.Controls.MetroComboBox();
-			this.metroButton1 = new MetroFramework.Controls.MetroButton();
 			this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
 			this.CategoryID = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.UnitID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -87,17 +83,8 @@
 			this.metroComboBoxSuppliers.ItemHeight = 23;
 			this.metroComboBoxSuppliers.Location = new System.Drawing.Point(156, 88);
 			this.metroComboBoxSuppliers.Name = "metroComboBoxSuppliers";
-			this.metroComboBoxSuppliers.Size = new System.Drawing.Size(232, 29);
+			this.metroComboBoxSuppliers.Size = new System.Drawing.Size(322, 29);
 			this.metroComboBoxSuppliers.TabIndex = 2;
-			// 
-			// metroButtonAddSupplier
-			// 
-			this.metroButtonAddSupplier.Location = new System.Drawing.Point(394, 88);
-			this.metroButtonAddSupplier.Name = "metroButtonAddSupplier";
-			this.metroButtonAddSupplier.Size = new System.Drawing.Size(86, 28);
-			this.metroButtonAddSupplier.TabIndex = 3;
-			this.metroButtonAddSupplier.Text = "Add Supplier";
-			this.metroButtonAddSupplier.Click += new System.EventHandler(this.metroButtonAddSupplier_Click);
 			// 
 			// dateTimePicker1
 			// 
@@ -117,36 +104,6 @@
 			this.metroLabel2.Size = new System.Drawing.Size(39, 19);
 			this.metroLabel2.TabIndex = 1;
 			this.metroLabel2.Text = "Date:";
-			// 
-			// metroLabel3
-			// 
-			this.metroLabel3.AutoSize = true;
-			this.metroLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.metroLabel3.CustomBackground = true;
-			this.metroLabel3.Location = new System.Drawing.Point(23, 128);
-			this.metroLabel3.Name = "metroLabel3";
-			this.metroLabel3.Size = new System.Drawing.Size(70, 19);
-			this.metroLabel3.TabIndex = 1;
-			this.metroLabel3.Text = "Employee:";
-			// 
-			// metroComboBoxEmployee
-			// 
-			this.metroComboBoxEmployee.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "EmployeeID", true));
-			this.metroComboBoxEmployee.FormattingEnabled = true;
-			this.metroComboBoxEmployee.ItemHeight = 23;
-			this.metroComboBoxEmployee.Location = new System.Drawing.Point(155, 123);
-			this.metroComboBoxEmployee.Name = "metroComboBoxEmployee";
-			this.metroComboBoxEmployee.Size = new System.Drawing.Size(232, 29);
-			this.metroComboBoxEmployee.TabIndex = 2;
-			// 
-			// metroButton1
-			// 
-			this.metroButton1.Location = new System.Drawing.Point(393, 123);
-			this.metroButton1.Name = "metroButton1";
-			this.metroButton1.Size = new System.Drawing.Size(86, 28);
-			this.metroButton1.TabIndex = 3;
-			this.metroButton1.Text = "Add Employee";
-			this.metroButton1.Click += new System.EventHandler(this.metroButtonAddSupplier_Click);
 			// 
 			// dataGridViewProducts
 			// 
@@ -340,15 +297,11 @@
 			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.metroButton2);
 			this.Controls.Add(this.metroButton3);
-			this.Controls.Add(this.metroButton1);
-			this.Controls.Add(this.metroButtonAddSupplier);
 			this.Controls.Add(this.metroComboBoxProduct);
-			this.Controls.Add(this.metroComboBoxEmployee);
 			this.Controls.Add(this.metroComboBoxSuppliers);
 			this.Controls.Add(this.metroLabel4);
 			this.Controls.Add(this.metroLabel6);
 			this.Controls.Add(this.metroLabel5);
-			this.Controls.Add(this.metroLabel3);
 			this.Controls.Add(this.metroLabel2);
 			this.Controls.Add(this.metroLabel1);
 			this.Name = "InvoiceDetails";
@@ -372,13 +325,9 @@
 		private System.Windows.Forms.BindingSource supplierBindingSource;
 		private MetroFramework.Controls.MetroLabel metroLabel1;
 		private MetroFramework.Controls.MetroComboBox metroComboBoxSuppliers;
-		private MetroFramework.Controls.MetroButton metroButtonAddSupplier;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private MetroFramework.Controls.MetroLabel metroLabel2;
-		private MetroFramework.Controls.MetroLabel metroLabel3;
-		private MetroFramework.Controls.MetroComboBox metroComboBoxEmployee;
 		private System.Windows.Forms.BindingSource employeeBindingSource;
-		private MetroFramework.Controls.MetroButton metroButton1;
 		private System.Windows.Forms.DataGridView dataGridViewProducts;
 		private System.Windows.Forms.BindingSource categoryBindingSource;
 		private System.Windows.Forms.BindingSource unitBindingSource;
