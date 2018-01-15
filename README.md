@@ -22,5 +22,4 @@ de a obtine diverse informatii sub forma de rapoarte din baza de date gestionata
 
 #### 1. Baza de date
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-![alt text](RestManager/DB_Diagram.PNG )
+![diagrama](https://github.com/leonardsfetcu/RestManager/blob/tnote/DB_Diagram.PNG)
