@@ -104,6 +104,9 @@
     <Compile Include="InvoiceDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InvoiceInfo.cs">
+      <DependentUpon>RestaurantDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
@@ -226,25 +229,20 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TransferNoteUnitPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransferNoteUnitPanel.Designer.cs">
-      <DependentUpon>TransferNoteUnitPanel.cs</DependentUpon>
     <Compile Include="TransferNote.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TransferNoteDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransferNoteDetails.Designer.cs">
-      <DependentUpon>TransferNoteDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="TransferNotePanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransferNotePanel.Designer.cs">
       <DependentUpon>TransferNotePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferNoteunitPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNoteunitPanel.Designer.cs">
+      <DependentUpon>TransferNoteunitPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="TransfetNoteUnit.cs">
       <DependentUpon>RestaurantDBModel.tt</DependentUpon>
@@ -310,13 +308,11 @@
     <EmbeddedResource Include="SupplierPanel.resx">
       <DependentUpon>SupplierPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferNoteUnitPanel.resx">
-      <DependentUpon>TransferNoteUnitPanel.cs</DependentUpon>
-    <EmbeddedResource Include="TransferNoteDetails.resx">
-      <DependentUpon>TransferNoteDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TransferNotePanel.resx">
       <DependentUpon>TransferNotePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferNoteunitPanel.resx">
+      <DependentUpon>TransferNoteunitPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />

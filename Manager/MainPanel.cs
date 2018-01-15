@@ -103,5 +103,14 @@ namespace Manager
 				Application.Exit();
 			}
 		}
+
+		private void metroTile5_Click(object sender, EventArgs e)
+		{
+			if (LoginForm.RequireAccesLevel(PrivilegeLevel.secretar))
+				using (TransferNotePanel tPanel = new TransferNotePanel())
+				{
+					tPanel.ShowDialog();
+				}
+		}
 	}
 }

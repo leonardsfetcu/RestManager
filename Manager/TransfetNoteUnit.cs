@@ -14,10 +14,10 @@ namespace Manager
     
     public partial class TransfetNoteUnit
     {
-        public int TransferNoteUnitID { get; set; }
         public int TransferNoteID { get; set; }
         public int ProductID { get; set; }
         public int Quantity { get; set; }
+        public int TransferNoteUnitID { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual TransferNote TransferNote { get; set; }
